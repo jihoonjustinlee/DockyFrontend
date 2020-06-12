@@ -1,0 +1,193 @@
+
+.answer-composer {
+	position: relative;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	width: 100%;
+	display:flex;
+	justify-content: flex-start;
+	margin-bottom: 2px;
+	align-items: center;
+}
+
+/* Hide the browser's default checkbox */
+.answer-composer input {
+	opacity: 0;
+	cursor: pointer;
+	height: 14px;
+	width: 14px;
+}
+
+.answer-composer > p {
+	padding: 0;
+	margin: 0;
+	width: calc(100% - 14px);
+}
+
+/* Create a custom checkbox */
+.checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 14px;
+	width: 14px;
+	background-color: #eee;
+	top: 50%;
+	transform: translateY(-50%);
+	border: 1px solid black;
+}
+
+.checkmark.focused{
+	background-color: white;
+	border: 1px solid #05a7bb;
+}
+/* 
+.customScroll.focused{
+	box-shadow: 0 0 0 2px red inset;
+} */
+
+/* On mouse-over, add a white background color */
+.answer-composer:hover input ~ .checkmark {
+	background-color: white;
+	border: 1px solid #05a7bb;
+}
+
+.answer-composer:hover .checkmark::after {
+	border: 4px solid #05a7bb;
+}
+
+/* When the checkbox is checked, add a darkred background 
+.answer-composer input:checked ~ .checkmark:after {
+	background-color: darkred;
+}*/
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+/* Show the checkmark when checked */
+.answer-composer input:checked ~ .checkmark:after {
+	display: block;
+}
+
+/* Style the checkmark/indicator */
+.answer-composer .checkmark:after {
+	left: 2px;
+	top: 2px;
+	border: solid black 4px;
+}
+
+.modal {
+	position:fixed;
+	top:0;
+	left:0%;
+	width:100%;
+	height:100%;
+	display: none;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+}
+
+.modal-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: calc(0.40509 * 100vw + 126.22764px);
+	min-width: calc(11.976vw + 170.05988px);
+	background: linear-gradient(#2d2d2d, #000000 );
+	border-radius: 10px;
+	color: white;
+	z-index: 999;
+}
+
+
+.modal-header {
+	display:flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 1px solid #595a5d;
+	width: calc(100% - 4em);
+}
+
+
+.modal-title {
+	padding: 0;
+	margin: calc(5px + 1vh + 0.5em) 0;
+	font-size:1.2em;
+}
+
+
+.modal-close {
+	font-weight: bold;
+	font-size: 1.5em;
+	background: linear-gradient(#f3743a, #d95b20);
+	color: #e4e4e9;
+	border-radius: 25px;
+	padding: 0 0.3em;
+}
+
+.modal-close:hover, .modal-close:focus {
+	cursor: pointer;
+	background: linear-gradient(#ff9b4d, #ff794d);
+}
+
+
+.modal-body {
+	overflow:auto;
+	max-height: calc(19.075vh + 83.51343px);
+	margin-bottom: 15px;
+	width: calc(100% - 4em);
+}
+
+.modal-correct {
+	color: white;
+	padding: 0 11px 0 0;
+}
+
+.modal-incorrect {
+	color: white;
+	padding: 0 11px 0 0;
+}
+
+.modal-body .directive { 
+	display:none;
+}
+
+
+.panel:focus{
+	outline: 5px solid black;
+}
+
+.submit {
+	background: lightgray;
+	color: darkgray;
+	pointer-events: none;
+	transition: background-color 1s ease-out, color 1s ease-out;
+	width: 100px;
+	padding: 6px 18px;
+	margin: 10px 0;
+	font-weight: bold;
+	font-size: 1em;
+	border: 0px;
+	outline: none;
+	border-radius: 45px;
+	box-shadow: inset 1px 1px 1px rgba(255, 255, 255, .2), inset -1px -1px 1px rgba(0, 0, 0, .1);
+	cursor: pointer;
+}
+
+.submit:focus, .submit:hover{
+	background: linear-gradient(#ff9b4d, #ff794d) !important;
+}
+
+div.panel {
+	width: calc(96.569vw - 48.174px);
+}
+

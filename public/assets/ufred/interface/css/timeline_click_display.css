@@ -1,0 +1,83 @@
+.cndButton {
+	background: linear-gradient(to right, var(--black) 0%,var(--grey) 100%);
+	flex-grow: 1;
+	margin-bottom: 0;
+	justify-content: center;
+	display:flex;
+	align-items: center;
+	height:auto;
+	line-height: normal;
+	padding: 1vh 0;
+	font-size: 1.2em;
+}
+
+.cndButton:hover, .cndButton.activated {
+	background: linear-gradient(to left, var(--primaryHLGradTop), var(--primaryHLGradBottom));
+}
+
+
+
+
+.cndButtonAfter { 
+	width: 0; 
+	height: auto; 
+	border-top: 2.75vh solid transparent;
+	border-bottom: 2.75vh solid transparent;
+	border-left: 2vw solid var(--grey);
+	content:'';
+	display: inline-block;
+	background-color: black;
+}
+
+.buttonComposer {
+	display:flex;
+	flex-grow:1;
+}
+.container {
+	width:98vw;			
+}
+
+.container:first-of-type {
+	margin-top:7px;
+}
+.textContainer {
+
+	max-width: 50vw;
+
+}
+
+.imageContainer {
+
+	min-width: 35vw;
+
+}
+
+.container.greyGrad {
+
+	min-height: 50vh;
+	width: 96vw;
+
+}
+
+@media only screen and (max-width: 1024px) and (orientation: portrait){
+	.container.greyGrad{
+		flex-direction:column;
+		min-height: 60vh;
+	}
+	.textContainer {
+		max-width: 95vw;
+	}
+}
+
+@media only screen and (max-width: 768px) and (orientation: portrait){
+	.cndButton {
+		font-size: 0.8em;
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	.cndButton {
+		margin-top:0;
+		font-size: 1em;
+	}
+}

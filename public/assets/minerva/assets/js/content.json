@@ -1,0 +1,29 @@
+{
+	"file_name": {
+
+		"accordion_plus":{
+			"alt_tag":["TAG1 Lorem ipsum dolor sit amet", "TAG2 Lorem ipsum dolor sit amet", ""]
+		},
+		"accordion_plus2":{
+			"alt_tag":["TAG1 Lorem ipsum dolor sit amet", "TAG2 Lorem ipsum dolor sit amet", "TAG3 Lorem ipsum dolor sit amet", "TAG4 Lorem ipsum dolor sit amet", "TAG5Lorem ipsum dolor sit amet", "TAG6 Lorem ipsum dolor sit amet"]
+		},
+		"assignment":{
+			"alt_tag":["TAG1 Lorem ipsum dolor sit amet", "TAG2 Lorem ipsum dolor sit amet", "TAG3 Lorem ipsum dolor sit amet", "TAG4 Lorem ipsum dolor sit amet", "TAG5Lorem ipsum dolor sit amet", "TAG6 Lorem ipsum dolor sit amet"]
+		},
+		"drag_and_drop":{
+			"alt_tag":["TAG1 Lorem ipsum dolor sit amet", "TAG2 Lorem ipsum dolor sit amet", "TAG3 Lorem ipsum dolor sit amet", "TAG4 Lorem ipsum dolor sit amet", "TAG5Lorem ipsum dolor sit amet", "TAG6 Lorem ipsum dolor sit amet"]
+		},
+		"horizontal_image_w_text":{
+			"alt_tag":["TAG1 Lorem ipsum dolor sit amet", "TAG2 Lorem ipsum dolor sit amet", "TAG3 Lorem ipsum dolor sit amet", "TAG4 Lorem ipsum dolor sit amet", "TAG5Lorem ipsum dolor sit amet", "TAG6 Lorem ipsum dolor sit amet"]
+		},
+		"image_click_display":{
+			"alt_tag":["TAG1 Lorem ipsum dolor sit amet", "TAG2 Lorem ipsum dolor sit amet", "TAG3 Lorem ipsum dolor sit amet", "TAG4 Lorem ipsum dolor sit amet", "TAG5Lorem ipsum dolor sit amet", "TAG6 Lorem ipsum dolor sit amet"]
+		},
+		"summary":{
+			"alt_tag":["TAG1 Lorem ipsum dolor sit amet", "TAG2 Lorem ipsum dolor sit amet", "TAG3 Lorem ipsum dolor sit amet", "TAG4 Lorem ipsum dolor sit amet", "TAG5Lorem ipsum dolor sit amet", "TAG6 Lorem ipsum dolor sit amet"]
+		},
+		"vertical_image_w_text":{
+			"alt_tag":["TAG1 Lorem ipsum dolor sit amet", "TAG2 Lorem ipsum dolor sit amet", "TAG3 Lorem ipsum dolor sit amet", "TAG4 Lorem ipsum dolor sit amet", "TAG5Lorem ipsum dolor sit amet", "TAG6 Lorem ipsum dolor sit amet"]
+		}
+	}
+}

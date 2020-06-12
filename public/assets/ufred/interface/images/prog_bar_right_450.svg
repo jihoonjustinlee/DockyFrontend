@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="450" height="59" viewBox="0 0 450 59">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-width: 3px;
+        fill-rule: evenodd;
+        fill: url(#linear-gradient);
+        stroke: url(#linear-gradient-2);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="112" x2="112" y2="59" gradientUnits="userSpaceOnUse">
+      <stop offset="0"/>
+      <stop offset="1" stop-color="#020202"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="112" y1="59" x2="112" gradientUnits="userSpaceOnUse">
+      <stop offset="0"/>
+      <stop offset="1" stop-color="#4d4d4d"/>
+    </linearGradient>
+  </defs>
+  <path id="Rounded_Rectangle_1_copy_2" data-name="Rounded Rectangle 1 copy 2" class="cls-1" d="M-226,59V0H362.963C410.409,0,435.456,28.864,450,59H-226Z"/>
+  <rect x="-226" y="3" width="9" height="56"/>
+</svg>

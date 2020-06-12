@@ -1,0 +1,711 @@
+<!doctype html>
+<html><head>
+	<meta charset="utf-8">
+	<title>Main Menu</title>	
+	<link rel="stylesheet" href="interface/css/core.css">
+	<link rel="stylesheet" type="text/css" href="interface/css/accordion.css">
+	<link rel="stylesheet" href="interface/css/main_menu.css" />
+
+	<script src="interface/js/jquery-3.3.1.min.js"></script>
+	<script src="interface/js/menus.js"></script>	
+</head>
+
+<body>
+	<!--this div is used to init the main menu after it is loaded. this button's click function is triggered when main menu is clicked from index  -->
+	<div id="initButton"></div>
+	
+	<!-- the '.firstTab' element is used to set focus on last element if shift+tab used. -->
+	<div class="firstTab" tabindex="1"></div>
+
+<!--
+	 Header Is this simpler or would using the same header-container and swap header__title be simpler? 
+	<div class="header-container">
+		<picture class="header__logo">
+			<source media="(max-width: 767px)" srcset="interface/images/minerva_logo_m.svg">
+			<img src="interface/images/minerva_logo.svg" alt="Minerva logo" tabindex="102">
+		</picture>
+		<div class="header__title">
+			<h2>Main Menu</h2>
+		</div>
+	</div>
+-->
+	
+	<div class="mainMenuContainer">
+		<div class="left">
+			<div class="menuItemsContainer" >
+				<div id="navigation" class="menuItem link" tabindex="2">Navigation</div>
+				<div id="resources" class="menuItem link" tabindex="3">Resources</div>
+				<div id="glossary" class="menuItem link" tabindex="4">Glossary</div>
+				<div id="help" class="menuItem link" tabindex="5">Help</div>
+			</div>
+			<div class="menuClose menuCloseMobile" id="menuClose" tabindex="6"></div>
+		</div> 
+		<div class="middle" >
+			
+			<!--Navigation-->
+			<div class="navigationContainer container">
+			
+				<p class="navDirective">Use the menu below to navigate to any point in the course, or click the 'Close' button to leave the Menu and return to the course.</p>
+				
+				
+				<div class="accordionContainer scrollContainer customScroll" >
+					<div class="psurvey">	
+						<button class="accordion">
+							<span class="moduleTitle">Module 1: Advanced Template Set</span>
+							<span class="progCircle incomplete"></span>
+						</button>
+
+						<div class="panel customScroll" id="panel1" >
+
+							<!--this container is used to deal with simplebar misbehaviour-->
+							<div class="topicContainer">
+
+								<div class="topic">
+									<div class="topicTitle">
+										<div class="topicTitleText">Modular Level Screens</div>
+										<div class="topicLock"></div>
+										<div class="topicTitleArrow"></div>
+									</div>
+									<div class="topicPage topicPageLock"  >01 - Intro Video</div>
+									<div class="topicPage topicPageLock"  >02 - Topic Introduction</div>
+									<div class="topicPage topicPageLock"  >03 - Topic Conclusion</div>
+									<div class="topicPage topicPageLock"  >04 - Summary</div>
+								</div>				
+								
+								<div class="topic">								
+									<div class="topicTitle">
+										<div class="topicTitleText">Text Display Templates</div>
+										<div class="topicLock"></div>
+										<div class="topicTitleArrow"></div>
+									</div>
+									<div class="topicPage topicPageLock"  >01 - Text Only</div>
+									<div class="topicPage topicPageLock"  >02 - Accordion</div>
+									<div class="topicPage topicPageLock"  >03 - Table</div>		
+									
+								</div>		
+								<div class="topic">
+									<div class="topicTitle">
+										<div class="topicTitleText">Media Display Templates</div>
+										<div class="topicLock"></div>
+										<div class="topicTitleArrow"></div>
+									</div>
+									<div class="topicPage topicPageLock"  >01 - Accordion Plus</div>
+									<div class="topicPage topicPageLock"  >02 - Accordion Plus Two</div>
+									<div class="topicPage topicPageLock"  >03 - Horizontal Image With Text</div>
+									<div class="topicPage topicPageLock"  >04 - Vertical Image With Text</div>
+									<div class="topicPage topicPageLock"  >05 - Image Click and Display</div>
+									<div class="topicPage topicPageLock"  >06 - Video Standard</div>
+								</div>	
+								<div class="topic">
+									<div class="topicTitle">
+										<div class="topicTitleText">Interactive Templates</div>
+										<div class="topicLock"></div>
+										<div class="topicTitleArrow"></div>
+									</div>
+									<div class="topicPage topicPageLock"  >01 - Drag and Drop</div>
+									<div class="topicPage topicPageLock"  >02 - Drag and Drop V2</div>
+									<div class="topicPage topicPageLock"  >03 - Assignment</div>
+									<div class="topicPage topicPageLock"  >04 - Self Check</div>
+								</div>	
+								<!-- end of topicContainer -->
+							</div>
+						</div><!--accordion-->
+					</div>
+					<div class="psurvey">			
+
+						<button class="accordion">
+							<span class="moduleTitle">Module 2: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span> 
+							<span class="progCircle incomplete"></span>
+						</button>
+						<div class="panel customScroll" id="panel1" >
+
+							<div class="lockDirective"><p>You must complete the previous module to access this content.</p></div>
+
+							<div class="topicContainer">
+
+								<!-- Module 2 intro -->	
+								<div class="topic">
+									<div class="topicTitle">
+										<div class="topicTitleText">Module Introduction</div>
+										<div class="topicLock"></div>
+										<div class="topicTitleArrow"></div>
+									</div>
+									<div class="topicPage topicPageLock"  >01 - Module Introduction</div>
+								</div>						
+								<!-- topic 1 -->
+								<div class="topic">								
+									<div class="topicTitle">
+										<div class="topicTitleText">Topic 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+										<div class="topicLock"></div>
+										<div class="topicTitleArrow"></div>
+									</div>
+									<div class="topicPage topicPageLock"  >01 - Topic Introduction</div>
+									<div class="topicPage topicPageLock"  >02 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >03 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >04 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >05 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >06 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >07 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >08 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >09 - Topic Conclusion</div>
+								</div>
+								<!-- topic 2 -->
+								<div class="topic">
+									<div class="topicTitle">
+										<div class="topicTitleText">Topic 2: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+										<div class="topicLock"></div>
+										<div class="topicTitleArrow"></div>
+									</div>
+									<div class="topicPage topicPageLock"  >01 - Topic Introduction</div>
+									<div class="topicPage topicPageLock"  >02 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >03 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >04 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >05 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >06 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >07 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >08 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >09 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >10 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >11 - Topic Conclusion</div>
+								</div>
+								<!-- topic 3 -->
+								<div class="topic">
+									<div class="topicTitle">
+										<div class="topicTitleText">Topic 3: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+										<div class="topicLock"></div>
+										<div class="topicTitleArrow"></div>
+									</div>
+									<div class="topicPage topicPageLock"  >01 - Topic Introduction</div>
+									<div class="topicPage topicPageLock"  >02 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >03 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >04 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >05 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >06 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >07 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >08 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >09 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >10 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >11 - Topic Conclusion</div>
+								</div>
+								<!-- topic 4 -->
+								<div class="topic">
+									<div class="topicTitle">
+										<div class="topicTitleText">Topic 4: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+										<div class="topicLock"></div>
+										<div class="topicTitleArrow"></div>
+									</div>
+									<div class="topicPage topicPageLock"  >01 - Topic Introduction</div>
+									<div class="topicPage topicPageLock"  >02 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >03 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >04 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >05 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >06 - Topic Conclusion</div>
+								</div>
+
+								<!-- topic 5 -->
+								<div class="topic">
+									<div class="topicTitle">
+										<div class="topicTitleText">Topic 5: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+										<div class="topicLock"></div>
+										<div class="topicTitleArrow"></div>
+									</div>
+									<div class="topicPage topicPageLock"  >01 - Topic Introduction</div>
+									<div class="topicPage topicPageLock"  >02 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >03 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >04 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >05 - Topic Conclusion</div>
+								</div>
+
+								<!-- topic 6 -->
+								<div class="topic">
+									<div class="topicTitle">
+										<div class="topicTitleText">Topic 6: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+										<div class="topicLock"></div>
+										<div class="topicTitleArrow"></div>
+									</div>
+									<div class="topicPage topicPageLock"  >01 - Topic Introduction</div>
+									<div class="topicPage topicPageLock"  >02 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >03 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >04 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >05 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >06 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >07 - Topic Conclusion</div>
+								</div>
+
+								<!-- topic 7 -->
+								<div class="topic">
+									<div class="topicTitle">
+										<div class="topicTitleText">Topic 7: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+										<div class="topicLock"></div>
+										<div class="topicTitleArrow"></div>
+									</div>
+									<div class="topicPage topicPageLock"  >01 - Topic Introduction</div>
+									<div class="topicPage topicPageLock"  >02 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >03 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >04 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >05 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >06 - Topic Conclusion</div>
+								</div>	
+
+								<!-- topic 8 -->
+								<div class="topic">
+									<div class="topicTitle">
+										<div class="topicTitleText">Topic 8: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+										<div class="topicLock"></div>
+										<div class="topicTitleArrow"></div>
+									</div>
+									<div class="topicPage topicPageLock"  >01 - Topic Introduction</div>
+									<div class="topicPage topicPageLock"  >02 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >03 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >04 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >05 - Topic Conclusion</div>
+								</div>
+
+								<!-- topic 9 -->
+								<div class="topic">
+									<div class="topicTitle">
+										<div class="topicTitleText">Topic 9: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+										<div class="topicLock"></div>
+										<div class="topicTitleArrow"></div>
+									</div>
+									<div class="topicPage topicPageLock"  >01 - Topic Introduction</div>
+									<div class="topicPage topicPageLock"  >02 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >03 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >04 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >05 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >06 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >07 - Topic Conclusion</div>	
+								</div>	
+
+								<!-- Module 1 summary -->	
+								<div class="topic">
+									<div class="topicTitle">
+										<div class="topicTitleText">Module Summary</div>
+										<div class="topicLock"></div>
+										<div class="topicTitleArrow"></div>
+									</div>
+									<div class="topicPage topicPageLock"  >01 - Module Summary</div>
+								</div>	
+								<!-- end of topicContainer -->
+							</div>
+
+
+
+						</div>
+					</div>
+					<div class="psurvey">			
+
+						<button class="accordion">
+							<span class="moduleTitle">Module 3: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span> 
+							<span class="progCircle incomplete"></span>
+						</button>
+						<div class="panel customScroll" id="panel1" >
+
+							<div class="lockDirective"><p>You must complete the previous module to access this content.</p></div>
+
+							<div class="topicContainer">
+
+								<!-- Module 2 intro -->	
+								<div class="topic">
+									<div class="topicTitle">
+										<div class="topicTitleText">Module Introduction</div>
+										<div class="topicLock"></div>
+										<div class="topicTitleArrow"></div>
+									</div>
+									<div class="topicPage topicPageLock"  >01 - Module Introduction</div>
+								</div>						
+								<!-- topic 1 -->
+								<div class="topic">								
+									<div class="topicTitle">
+										<div class="topicTitleText">Topic 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+										<div class="topicLock"></div>
+										<div class="topicTitleArrow"></div>
+									</div>
+									<div class="topicPage topicPageLock"  >01 - Topic Introduction</div>
+									<div class="topicPage topicPageLock"  >02 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >03 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >04 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >05 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >06 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >07 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >08 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >09 - Topic Conclusion</div>
+								</div>
+								<!-- topic 2 -->
+								<div class="topic">
+									<div class="topicTitle">
+										<div class="topicTitleText">Topic 2: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+										<div class="topicLock"></div>
+										<div class="topicTitleArrow"></div>
+									</div>
+									<div class="topicPage topicPageLock"  >01 - Topic Introduction</div>
+									<div class="topicPage topicPageLock"  >02 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >03 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >04 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >05 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >06 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >07 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >08 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >09 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >10 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >11 - Topic Conclusion</div>
+								</div>
+								<!-- topic 3 -->
+								<div class="topic">
+									<div class="topicTitle">
+										<div class="topicTitleText">Topic 3: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+										<div class="topicLock"></div>
+										<div class="topicTitleArrow"></div>
+									</div>
+									<div class="topicPage topicPageLock"  >01 - Topic Introduction</div>
+									<div class="topicPage topicPageLock"  >02 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >03 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >04 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >05 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >06 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >07 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >08 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >09 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >10 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >11 - Topic Conclusion</div>
+								</div>
+								<!-- topic 4 -->
+								<div class="topic">
+									<div class="topicTitle">
+										<div class="topicTitleText">Topic 4: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+										<div class="topicLock"></div>
+										<div class="topicTitleArrow"></div>
+									</div>
+									<div class="topicPage topicPageLock"  >01 - Topic Introduction</div>
+									<div class="topicPage topicPageLock"  >02 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >03 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >04 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >05 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >06 - Topic Conclusion</div>
+								</div>
+
+								<!-- topic 5 -->
+								<div class="topic">
+									<div class="topicTitle">
+										<div class="topicTitleText">Topic 5: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+										<div class="topicLock"></div>
+										<div class="topicTitleArrow"></div>
+									</div>
+									<div class="topicPage topicPageLock"  >01 - Topic Introduction</div>
+									<div class="topicPage topicPageLock"  >02 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >03 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >04 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >05 - Topic Conclusion</div>
+								</div>
+
+								<!-- topic 6 -->
+								<div class="topic">
+									<div class="topicTitle">
+										<div class="topicTitleText">Topic 6: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+										<div class="topicLock"></div>
+										<div class="topicTitleArrow"></div>
+									</div>
+									<div class="topicPage topicPageLock"  >01 - Topic Introduction</div>
+									<div class="topicPage topicPageLock"  >02 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >03 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >04 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >05 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >06 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >07 - Topic Conclusion</div>
+								</div>
+
+								<!-- topic 7 -->
+								<div class="topic">
+									<div class="topicTitle">
+										<div class="topicTitleText">Topic 7: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+										<div class="topicLock"></div>
+										<div class="topicTitleArrow"></div>
+									</div>
+									<div class="topicPage topicPageLock"  >01 - Topic Introduction</div>
+									<div class="topicPage topicPageLock"  >02 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >03 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >04 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >05 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >06 - Topic Conclusion</div>
+								</div>	
+
+								<!-- topic 8 -->
+								<div class="topic">
+									<div class="topicTitle">
+										<div class="topicTitleText">Topic 8: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+										<div class="topicLock"></div>
+										<div class="topicTitleArrow"></div>
+									</div>
+									<div class="topicPage topicPageLock"  >01 - Topic Introduction</div>
+									<div class="topicPage topicPageLock"  >02 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >03 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >04 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >05 - Topic Conclusion</div>
+								</div>
+
+								<!-- topic 9 -->
+								<div class="topic">
+									<div class="topicTitle">
+										<div class="topicTitleText">Topic 9: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+										<div class="topicLock"></div>
+										<div class="topicTitleArrow"></div>
+									</div>
+									<div class="topicPage topicPageLock"  >01 - Topic Introduction</div>
+									<div class="topicPage topicPageLock"  >02 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >03 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >04 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >05 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >06 - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+									<div class="topicPage topicPageLock"  >07 - Topic Conclusion</div>	
+								</div>	
+
+								<!-- Module 1 summary -->	
+								<div class="topic">
+									<div class="topicTitle">
+										<div class="topicTitleText">Module Summary</div>
+										<div class="topicLock"></div>
+										<div class="topicTitleArrow"></div>
+									</div>
+									<div class="topicPage topicPageLock"  >01 - Module Summary</div>
+								</div>	
+								<!-- end of topicContainer -->
+							</div>
+
+
+
+						</div>
+					</div>
+					<!-- the '.lastTab' element is used to set focus on '#navigation' element. -->
+<!--					<div class="lastTab" tabindex="0"></div>-->
+
+				</div>
+				
+				<div class="iconGrouper">
+					<div class="iconContainer">
+						<div class="icon complete"></div> 
+						<div>Complete</div>
+					</div>
+
+					<div class="iconContainer">
+						<div class="icon inprogress"></div>
+						<div>In Progress</div>
+					</div>
+
+					<div class="iconContainer">
+						<div class="icon incomplete"></div>
+						<div>Incomplete</div>
+					</div>
+				</div>
+			</div>
+			<!--Resources-->
+			<div class="resourcesContainer container">
+
+				<p class="navDirective">Use the resource menu below to navigate to view all additional resources available for this Module.</p>
+
+				<!-- resources container -->
+				<div class="resCon scrollContainer customScroll">
+					
+					<!-- Documents -->
+					<div class="resCategory sectionTitle">Documents</div>
+					<div class="resource"> 
+						<div class="resTitle">Lorem ipsum dolor sit amet consectetur adipiscing elit 01.pdf</div>
+						<a href="assets/resources/1.pdf" target="_blank" class="resBtn" tabindex="0">View</a>
+					</div>
+					
+					<div class="resource"> 
+						<div class="resTitle">Lorem ipsum dolor sit amet consectetur adipiscing elit 02.pdf</div>
+						<a href="assets/resources/2.pdf" target="_blank" class="resBtn" tabindex="0">View</a>
+					</div>
+					
+					<div class="resource"> 
+						<div class="resTitle">Lorem_ipsum-dolor sit amet consectetur adipiscing elit 03.pdf</div>
+						<a href="assets/resources/3.pdf" target="_blank" class="resBtn" tabindex="0">View</a>
+					</div>
+					
+					<div class="resource"> 
+						<div class="resTitle">Lorem ipsum dolor sit amet consectetur adipiscing elit 04.pdf</div>
+						<a href="assets/resources/4.pdf" target="_blank" class="resBtn" tabindex="0">View</a>
+					</div>
+					
+					<div class="resource"> 
+						<div class="resTitle">Lorem_ipsum-dolor sit amet consectetur adipiscing elit 05.pdf</div>
+						<a href="assets/resources/5.pdf" target="_blank" class="resBtn" tabindex="0">View</a>
+					</div>
+					
+					<div class="resource"> 
+						<div class="resTitle">Lorem ipsum dolor sit amet consectetur adipiscing elit 06.pdf</div>
+						<a href="assets/resources/5.pdf" target="_blank" class="resBtn" tabindex="0">View</a>
+					</div>
+					
+					<div class="resource"> 
+						<div class="resTitle">Lorem_ipsum-dolor sit amet consectetur adipiscing elit 07.pdf</div>
+						<a href="assets/resources/5.pdf" download class="resBtn" tabindex="0">Save</a>
+					</div>
+					
+					<!-- Links -->
+					<div class="resCategory sectionTitle">Links</div>
+					<div class="resource"> 
+						<div class="resTitle">www.ufred.ca</div>
+						<a href="https://www.ufred.ca/" target="_blank" class="resBtn" tabindex="0">View</a>
+					</div>
+					
+					<div class="resource"> 
+						<div class="resTitle">www.google.com</div>
+						<a href="https://www.google.com/" target="_blank" class="resBtn" tabindex="0">View</a>
+					</div>
+					
+					<div class="resource"> 
+						<div class="resTitle">www.Lorem_ipsum-dolorsitam03.com</div>
+						<a href="www.Lorem_ipsum-dolorsitametconsecteturadipiscingelit03.com" target="_blank" class="resBtn" tabindex="0">View</a>
+					</div>
+				</div>
+				
+				<!-- the '.lastTab' element is used to set focus on '#navigation' element. -->
+				<div class="lastTab" tabindex="0"></div>
+			</div>
+
+			<!--glossary-->
+			<div class="glossaryContainer container">	
+
+				<p class="navDirective">Use the clickable letters below to view glossary terms associated with this Module.</p>
+
+				<div class="glossCon ">					
+					<div class="gEntryContainer">
+						<div class="link gEntry" tabindex="0">A</div>
+						<div class="link gEntry" tabindex="0">B</div>
+						<div class="link gEntry" tabindex="0">C</div>
+						<div class="link gEntry" tabindex="0">D</div>
+						<div class="link gEntry" tabindex="0">E</div>
+						<div class="link gEntry" tabindex="0">F</div>
+						<div class="link gEntry" tabindex="0">G</div>
+						<div class="link gEntry" tabindex="0">H</div>
+						<div class="link gEntry" tabindex="0">I</div>
+						<div class="link gEntry" tabindex="0">J</div>
+						<div class="link gEntry" tabindex="0">K</div>
+						<div class="link gEntry" tabindex="0">L</div>
+						<div class="link gEntry" tabindex="0">M</div>
+						<div class="link gEntry" tabindex="0">N</div>
+						<div class="link gEntry" tabindex="0">O</div>
+						<div class="link gEntry" tabindex="0">P</div>
+						<div class="link gEntry" tabindex="0">Q</div>
+						<div class="link gEntry" tabindex="0">R</div>
+						<div class="link gEntry" tabindex="0">S</div>
+						<div class="link gEntry" tabindex="0">T</div>
+						<div class="link gEntry" tabindex="0">U</div>
+						<div class="link gEntry" tabindex="0">V</div>
+						<div class="link gEntry" tabindex="0">W</div>
+						<div class="link gEntry" tabindex="0">X</div>
+						<div class="link gEntry" tabindex="0">Y</div>
+						<div class="link gEntry" tabindex="0">Z</div>
+					</div>	
+				
+
+					<div class="scrollContainer customScroll gDefinitionContainer">
+
+						<!-- glossary definitions for each letter will be added here. check menus.js and gloassary.json -->
+						<!-- example:
+						<div class='gTitle'> Entry title </div>
+						<div class='gDef'> Entry definition </div>
+						-->
+					</div>
+
+				</div>
+
+				<!-- the '.lastTab' element is used to set focus on '#navigation' element. -->
+				<div class="lastTab" tabindex="0"></div>
+
+			</div>		
+
+
+
+			<!--Help-->
+			<div class="helpContainer container">
+
+				<p class="navDirective">Welcome to the Help menu.</p>
+
+				<div class="helpCategory sectionTitle">Navigation</div>
+
+				<!--This nested div is needed for the responsive border around SVG-->
+				<div class="helpImgContainer">
+					<div class="helpImg"></div>
+				</div>
+
+				<div class="helpItemContainer scrollContainer customScroll">			
+
+					<div class="helpItemWrapper">
+						<div class="helpItemNumber" tabindex="0">1</div>
+						<div class="helpItemText">
+							<span class="bold">Next Button</span> - Clicking this button will take you to the next screen of the current lesson.
+						</div>
+					</div>
+					
+					<div class="helpItemWrapper">
+						<div class="helpItemNumber">2</div>
+						<div class="helpItemText">
+							<span class="bold">Main Menu</span> - Clicking this button will allow you to jump to other areas in the same course.
+						</div>
+					</div>
+					
+					<div class="helpItemWrapper">
+						<div class="helpItemNumber">3</div>
+						<div class="helpItemText">
+							<span class="bold">Back Button</span> - Clicking this button will take you to the previous screen of the current lesson.
+						</div>
+					</div>
+					
+					<div class="helpItemWrapper">
+						<div class="helpItemNumber">4</div>
+						<div class="helpItemText">
+							<span class="bold">Progress Bar</span> - This feature allows you to see what percentage of the current Module you have completed.
+						</div>
+					</div>
+					
+					<div class="helpItemWrapper">
+						<div class="helpItemNumber">5</div>
+						<div class="helpItemText">
+							<span class="bold">Replay Button</span> - When active, this button allows you to restart the animation on the current page from the beginning.
+						</div>
+					</div>
+					
+					<div class="helpItemWrapper">
+						<div class="helpItemNumber">6</div>
+						<div class="helpItemText">
+							<span class="bold">Play/Pause Button</span> - When active, this toggle button allows you to play and pause the animation on the current page.
+						</div>
+					</div>
+					
+					<div class="helpItemWrapper">
+						<div class="helpItemNumber">7</div>
+						<div class="helpItemText">
+							<span class="bold">Mute Button</span> - This allows the user to mute and unmute all audio being played in the course.
+						</div>
+					</div>
+
+					<div class="helpItemWrapper hideAtTablet">
+						<div class="helpItemNumber">8</div>
+						<div class="helpItemText">
+							<span class="bold">Topic Title</span> - This shows the name of the current topic.
+						</div>
+					</div>
+					
+				</div><!-- end of helpItemContainer -->
+
+				<!-- the '.lastTab' element is used to set focus on '#navigation' element. -->
+			</div>
+		</div><!--end of middle-->
+		<div class="right">
+			<div class="menuClose" tabindex="6" onClick="menuCloseClick();"></div>
+			<div class="lastTab" tabindex="0"></div>
+		</div>
+	</div><!--end of mainMenuContainer-->
+	
+	
+	<!--<div class="ccSpacer"></div>-->
+	
+	
+	<!--<script src="js/accordion.js"></script>-->
+	
+							
+	
+</body>
+</html>

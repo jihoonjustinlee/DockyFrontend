@@ -1,0 +1,7 @@
+body {
+  background-color: none;
+}
+body * {
+  box-sizing: border-box;
+}
+

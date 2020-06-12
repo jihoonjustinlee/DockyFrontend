@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script src="interface/js/jquery.js"></script>
+        <script src="interface/js/jquery-ui.js"></script>
+        <script>
+            var allFrames = document.getElementsByTagName('iframe');
+            function allPrev(){
+                for (var i = 0; i < allFrames.length; i++) { 
+                    allFrames[i].contentWindow.document.getElementById('back').click(); 
+                    
+                    /*var thisFrame = allFrames[i].getBoundingClientRect();
+                    
+                    console.log(thisFrame.right);
+                    simulateClick(thisFrame.right - 85, thisFrame.bottom-20, allFrames[i]);*/
+                }
+            }
+            function allNext(){
+                for (var i = 0; i < allFrames.length; i++) { 
+                    allFrames[i].contentWindow.document.getElementById('forward').click(); 
+                    
+                    /*var thisFrame = allFrames[i].getBoundingClientRect();
+                    simulateClick(thisFrame.right - 30, thisFrame.bottom - 20, allFrames[i]);*/
+                }
+            }
+            function simulateClick(x, y, frame) {
+                jQuery(document.elementFromPoint(x, y)).click();
+                console.log("X:"+x+" Y:"+y)
+                $(frame).append("<div style=' width: 5px; height: 5px; background-color: red; position: absolute; left: "+x+"px; top: "+y+"px'></div>"); 
+            }
+            </script>
+    </head>
+    <body>
+            <div class="button container"><button onclick="allPrev()">prev</button><button onclick="allNext()">next</button></div>
+            <!--iphone 5 320 x 568 -->
+            <iframe draggable="true" src="index.html" width="320" height="568" ></iframe>
+            <!--iphone X 375 x 812 -->
+            <iframe src="index.html" width="375" height="812" ></iframe>
+            <!--ipad portrait 768 x 1024 -->
+            <iframe src="index.html" width="768" height="1024" ></iframe>
+            <!--ipad pro portrait 1024 x 1366 -->
+            <iframe src="index.html" width="1024" height="1366" ></iframe>
+            <!--ipad portrait 768 x 1024 -->
+            <iframe src="index.html" width="1024" height="768" ></iframe>
+            <!--ipad pro portrait 1024 x 1366 -->
+            <iframe src="index.html" width="1366" height="1024" ></iframe>
+
+        <style>
+            iframe { margin: 1em 2em; float: left; border: none; }
+            body { overflow: auto ; }
+        </style>
+        <script>
+                $( function() {
+                  $( "iframe" ).draggable();
+                } );
+                </script>
+        
+    </body>
+</html>

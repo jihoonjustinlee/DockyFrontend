@@ -1,0 +1,36 @@
+
+
+
+.showToolTip{visibility: visible !important; opacity: 1 !important; /* make the tooltip visible on focus */}
+
+
+/*logo*/
+.tab-logo{outline : red solid 2px !important;}
+
+
+/*ccButton*/
+.tab-cc{background : url(../images/minerva_cc_tab_o.svg) left/contain no-repeat !important;}
+
+/*unmute*/
+.tab-unmute{background : url(../images/icon_audioOn_over.svg) center/contain no-repeat !important;}
+
+/*mute*/
+.tab-mute{background: url(../images/icon_audioOff_over.svg) center/contain no-repeat !important;}
+
+/*pause*/
+.tab-pause{background : url(../images/icon_pause_o.svg) center/contain no-repeat !important;}
+
+/*play*/
+.tab-play{background: url(../images/icon_play_o.svg) center/contain no-repeat !important;}
+
+/*replay*/
+.tab-replay{background: url(../images/icon_replay_o.svg) center/contain no-repeat !important;}
+
+/*back*/
+.tab-back{background: linear-gradient(var(--secondaryHLGradTop), var(--secondaryHLGradBottom)) !important;}
+
+/*main*/
+.tab-main{background: center/contain url(../images/menu_icon.svg) no-repeat, linear-gradient(#ff9b4d, #ff794d) !important;}
+
+/*forward*/
+.tab-forward{background: linear-gradient(var(--secondaryHLGradTop), var(--secondaryHLGradBottom)) !important;}

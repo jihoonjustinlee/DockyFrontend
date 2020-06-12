@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+	<!--summary-->
+	<meta charset="utf-8">
+	<title>Module Summary</title>
+	<link rel="stylesheet" href="interface/css/core.css">
+	<link rel="stylesheet" href="interface/css/summary.css">
+	<script src="interface/js/jquery.js"></script>
+	<script src="interface/js/SCORM_API_wrapper.js"></script>
+	<script>
+		// Determine how many audios are needed
+		let numAudios = 1;
+		
+	</script>
+</head>
+
+<body class="flexContainer">
+	<div class="half-vertical-left customScroll">
+		<h1>Module Summary</h1>
+		<p>You have reached the end of this module. You should now be able to:<br></p>
+		<ul>
+			<li><span>Learn the definition, history, and key terms and theories of Emotional Intelligence (EI).</span></li>
+			<li><span>Learn the role of the Manager in promoting Psychological Health & Safety in the workplace.</span></li>
+			<li><span>Begin to develop a stronger sense of self-awareness and self-management.</span></li>
+			<li><span>Gain a greater understanding of, and ability to, manage your own emotions and reactions to situations and events.</span></li>
+			<li><span>Gain a greater understanding of, and ability to, manage around others emotions and reactions to situations and event.</span></li>
+		</ul>
+		<p>You have also:</p>
+		<ul>
+		  <li><span>Demonstrated and reinforced understanding of the content through application of knowledge to assignments and in discussion forums.</span></li>	
+		</ul>
+
+		<p>Next you will:</p>
+
+		<ul>
+		  <li><span>Demonstrate understanding of the content through application of knowledge to testing.</span></li>	
+		</ul>
+
+		<p class="directive">You can review the course content anytime by accessing the course menu. If you are ready to take the module quiz, click the 'Complete' button below to close this module and access the quiz.</p>
+
+		<!-- the complete button. This button won't work locally but will work fine on LMS -->	
+		<!-- We should make this in JS file, not in HTML - Bill -->	
+		<button class="simpleButton" onClick="parent.window.parent.close(); parent.complete();">Complete</div>
+
+	</div>
+
+	<div class="half-vertical-right">
+		<img class="half-vertical-image" alt="Keep Learning Image" src="./interface/images/summary.jpg">
+	</div>
+	
+	<script src="assets/js/pages.js"></script>
+	<script src="interface/js/media_control.js"></script>
+	<script src="interface/js/audio_markup_generator.js"></script>
+</body>
+</html>
+

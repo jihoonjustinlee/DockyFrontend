@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+	<!--table-->
+	<meta charset="utf-8">
+	<title>Table</title>
+	<link rel="stylesheet" href="interface/css/core.css">
+	<link rel="stylesheet" href="interface/css/table.css">
+	<script src="interface/js/jquery.js"></script>
+	<script src="interface/js/table.js"></script>
+	<script>
+		
+		// Title of the table
+		let tableTitle = 'Title';
+		
+		// A 2D array that contains the content of the table, tableContent[0] is the header row, tableContent[1] and on are the content rows. In the default example below, we are constructing a three column table with one header row and two content rows.
+		let tableContent = [
+			['Header1',
+			 'Header2',
+			 'Header3'
+			],
+			
+			['Lorem ipsum dolor sit amet, ',
+			 'Lorem ipsum dolor sit amet, ',
+			 'Lorem ipsum dolor sit amet, '
+			],
+			
+			['Lorem ipsum dolor sit amet,  ',
+			 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ',
+			 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse n']
+			
+		];
+		
+		// Determine how many audios are needed, set to negative number to indicate animation timing/custom implementation is required.
+		let numAudios = 3;
+		
+	</script>
+
+</head>
+<body class="customScroll">
+	<div class="flexBox column">
+		<div class="textarea fullWidth">
+			<h1>Table</h1>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non lacus hendrerit, egestas ex nec, dapibus libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mauris justo, faucibus et erat eget, egestas luctus arcu. Sed bibendum tempor tempor. Suspendisse quis maximus enim. Suspendisse potenti. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non lacus hendrerit, egestas ex nec, dapibus libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mauris justo, faucibus et erat eget, egestas luctus arcu. Sed bibendum tempor tempor. Suspendisse quis maximus enim. Suspendisse potenti. 
+			</p>
+
+			<div class="table-users"></div>
+
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non lacus hendrerit, egestas ex nec, dapibus libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mauris justo, faucibus et erat eget, egestas luctus arcu. Sed bibendum tempor tempor.
+			</p>	
+			<p class="directive">Click the ‘Next’ arrow to continue.</p>
+			
+		</div>
+	</div>
+	
+	<script src="assets/js/pages.js"></script>
+	<script src="interface/js/media_control.js"></script>
+	<script src="interface/js/audio_markup_generator.js"></script>
+</body>
+</html>

@@ -1,0 +1,245 @@
+/* *** --------------------Page Standards-------------------- *** */
+
+/* * Functional * */
+
+.hidden { z-index: -4; visibility: hidden; opacity:0;}
+.unhidden { z-index:2; visibility: visible; overflow-x: hidden; overflow-y: auto; opacity: 1;}
+.hidingIt { z-index: -3; visibility: visible; opacity: 1;}
+.offBlocker {visibility: hidden}
+.onBlocker, .fader {visibility: visible;}
+.off {z-index: -5; pointer-events: none;}
+.on {z-index: 3;}
+.blocker { display:block; overflow: hidden; height: 100vh; width: 100vw; position: fixed; background-color: rgba(255, 0, 0, 0); z-index: 20; }
+.disabled { cursor: not-allowed; }
+.open { top: -9vh !important; }
+
+/* * Generic * */
+
+html { font-size: var(--baseFontSize); height:100vh; width:100vw; position: fixed; -webkit-transform: translate3d(0,0,0) }
+body { margin: 0; overflow:hidden; -webkit-user-select: none;  /* Chrome all / Safari all */  -moz-user-select: none;  /* Firefox all */  -ms-user-select: none;   /* IE 10+ */  user-select: none; /* Likely future */  }
+#bgImage {background-repeat: no-repeat; -webkit-background-size: cover;-moz-background-size: cover; background-size: cover; width: 100%; height: 100%; position: absolute; z-index: -11; padding-bottom: 57.5px; box-sizing: border-box }
+
+/* Duplicated from style.css */
+
+h1, h2, h3, p, li, a, button, div, .cndButton {
+	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+/* * iFrame * */
+
+iframe { position: absolute; height: 100%; border: none; padding-bottom: 90px; box-sizing: border-box; width: 100%; }
+.blockAndFade { height: 100%; width: 100%; position: fixed; background-color: rgba(0,0,0,0.5); display: none; z-index: 3; }
+.fader { display:block;  overflow: auto; height: 100%; width: 100%; position: fixed; background-color: #FFFFFF ; background-color: var(--lightGradTop); }
+
+/* * CC * */
+
+#ccButton{overflow: hidden; padding: 8px; box-sizing: border-box; }
+
+/* * Header * */
+
+.header {margin: 0;width: 100%;z-index: 0;overflow: hidden; position: relative; top: 0px;}
+.header-container { padding-bottom: 0px; }
+.top-bar1, .top-bar2 { display: block; width: 100%; z-index: 999;}
+.logo-tab { right: 0px; position: absolute; z-index: 10; }
+.logo-tab img { float: right; height: 100%; margin-right: -2px; }
+.course-title { position: absolute; top: 50%; transform: translateY(-50%); padding-left: 2vw; font-weight: 600; overflow: hidden; z-index: 4; }
+
+/* * Footer * */
+
+.footer {margin: 0;width: 100%;z-index: 1;overflow: hidden;position: absolute; bottom: 0px;}
+.footerBlocker { width: 50%; left: 50%; opacity: 0; display: none; position: fixed; }
+.extraSpacer{height: 1px; width: 24px;display:inline-block; }
+.spacer { width: 40px; height: 40px; display: inline-block; }
+.bottom-bar1, .bottom-bar2 { display: block; width: 100%; position: absolute; z-index: 4; }
+.module-title {  padding-left:2vw; font-weight: 600; overflow: hidden; max-width: 33%; display:flex;margin:auto 0;}
+.module-title > div {margin:auto;}
+.nav-items { overflow: hidden; float: right; display:flex;}
+.btn, .extraBtn { cursor: pointer; }
+#stopIt { z-index: 3; display: none; }
+#closeIT { padding: 5px; cursor: pointer; }
+
+/* *Closed Captioning * */
+
+#ccContainer { overflow: visible; z-index: 3; }
+/*#closedCaption { z-index: 3; width: 90%; left: 5%; height: 11vh; position: absolute; top: -0px; background-color: #A91E23 ; background-color: var(--primary); transition: top 1s; }*/
+#closedCaption { z-index: 3; width: 90%; left: 0; right:0; height: 11vh; position: absolute; top: -0px;transition: top 1s; margin:0 auto;}
+#ccText { overflow: auto; height: 8vh; width: 96%; margin: 0.6% auto; opacity: 1; background-color: white; padding: 4px 16px; border: #A91E23 medium solid;}
+
+/* * Navigation * */
+
+.sideMenu{ right: -100vw; width: 100vw; z-index: 5;	overflow: hidden; position: absolute; height: 100vh; padding-bottom: 139px;	box-sizing: border-box; }
+
+/* ** ------Colours------ ** */
+
+.primary {color: #A91E23; color: var(--primary);}
+.primaryBG {background: #A91E23 ; background: var(--primary);}
+.primaryHL {color: #DC252C; color: var(--primaryHL);}
+.secondary {color: #ffcf48; color: var(--secondary);} 
+.secondaryHL {color: #00AA00; color: var(--secondaryHL);}
+.white { color: #FFFFFF;  color: var(--white); }
+
+p, li span { color: #000000; color: var(--textColor); }
+li, h1, h2, h3 { color: #DC252C; color: var(--primaryHL); }
+.top-bar1, .bottom-bar1 { background-color: #FFFFFF; background-color: var(--lightGradTop); }
+.top-bar2, .bottom-bar2 { background-color: #A91E23; background-color: var(--primary); }
+.topicButton:hover, .btn:hover, .extraBtn:hover { background-color: #A91E23; background-color: var(--primary);}
+.header, .footer, .extraMenu {background: black; /* For browsers that do not support gradients */ background: -webkit-linear-gradient( var(--darkGradTop), var(--darkGradBottom)); /* For Safari 5.1 to 6.0 */    
+	background: -o-linear-gradient( var(--darkGradTop), var(--darkGradBottom)); /* For Opera 11.1 to 12.0 */    background: -moz-linear-gradient( var(--darkGradTop), var(--darkGradBottom)); /* For Firefox 3.6 to 15 */    
+	background: linear-gradient( var(--darkGradTop), var(--darkGradBottom)); /* Standard syntax */}
+.course-title, .module-title { color: #FFFFFF; color: var(--lightGradTop); }
+
+/* ** ------Font and Font Sizes------ ** */
+
+* { font-family: "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif"; /*font-size: 16pt; */}
+
+
+
+/* *** --------------------RESPONSIVE------------------- *** */
+
+
+
+/* Small(Mobile)*/
+
+@media only screen and (max-width: 480px) {
+
+	#bgImage {background-image:url(../images/background_480.jpg);}
+
+	.header {height: 38px;}
+	.footer { height: 40px; }	
+
+	.logo-tab { width: 80px; }
+
+	.top-bar1 {height: 2px;}
+	.top-bar2 {height: 4px;}
+	.bottom-bar1{height: 2px;bottom: 40px;}
+	.bottom-bar2 {height: 4px; bottom: 42px;}
+
+	.course-title { font-size: 0.75em; width: calc(100% - 100px); }
+	.module-title {display: none;}
+
+	.nav-items {padding-right: 5px;}
+
+	.spacer {display: none !important;}
+
+	.btn, .extraBtn {height: 40px;}
+
+	#extraMenus {display: inline-block;}
+
+	#help, #resource, #main{display:none;}
+
+	.extraMenu { display: none; z-index: 5; position: absolute; bottom: 0px;
+		width: 200px; height: 90px;right: 0px; }
+
+	.extraNav-items {position:absolute;margin-left: 10px;margin-top: 6px;}
+
+	iframe { padding-bottom: 90px; overflow-y: auto;}
+}
+
+/* Medium(Tablet)*/
+
+@media only screen and (min-width: 481px) and (max-width: 1023px){
+
+	#bgImage { background-image:url(../images/background_1054.jpg); }
+
+	.header {height: 50px; display: flex; align-items: center;}
+	.footer { height: 52px; /*display: flex; align-items: center;*/}	
+
+	.logo-tab { width: 280px; }
+
+	.top-bar1 { height: 2px; }
+	.top-bar2 { height: 4px; top: 2px; }
+	.bottom-bar1{ height: 2px; bottom: 52px; }
+	.bottom-bar2 { height: 4px; bottom: 54px; }
+
+	.course-title { font-size: 1em; width: calc(100% - 300px);}
+	.module-title {display: none;}
+
+	.nav-items { padding-right: 10px; margin-left: auto; height: 52px; }
+
+	.btn, .extraBtn { height: 52px; }
+
+	#extraMenus { display: none; }
+
+	.extraMenu { display: none; z-index: 5; position: absolute; bottom: 0px;
+		width: 236px; height: 110px; right: 0px; }
+
+	.extraNav-items { position:absolute; margin-left: 10px; }
+
+	iframe { padding-bottom: 114px; overflow: auto; }	
+
+}
+
+@media (max-width: 1023px){
+	.footerBlocker { width: 100%; left: 0}
+	#closedCaption {
+		width:100%;
+	}
+	#ccText {
+		width:93%;
+		padding: 2px 8px;
+		font-size: 0.8em;
+	}
+}
+
+/* Large(Desktop/landscape Tablet)*/
+
+@media only screen and (min-width: 1024px) and (max-width: 1824px){
+
+	#bgImage { background-image:url(../images/background_1435.jpg); }
+
+	.header {height: 60px;}
+	.footer { height: 62px; }
+
+	.logo-tab { width: 345px; }
+
+	.top-bar1 { height: 3px; }
+	.top-bar2 { height: 6px; top: 3px; }
+	.bottom-bar1{ height: 3px; bottom: 62px; }
+	.bottom-bar2 { height: 6px; bottom: 65px; }
+
+	.course-title { font-size: 1.35em; width: calc(100% - 350px);}
+	.module-title { font-size: 1.25em; }
+
+	.nav-items { padding-right: 15px; }
+
+	.btn { height: 62px; }
+
+	#extraMenus, .extraMenu, #extraHelp, #extraResource, #extraMain, .extraBtn { display: none; }
+
+	iframe { padding-bottom: 139px; overflow: hidden; }
+}
+
+/* X-Large(Desktop power user)*/
+
+@media only screen and (min-width: 1825px){
+
+	#bgImage { background-image:url(../images/background_2048.jpg); }
+
+	.header {height: 60px;}
+	.footer { height: 62px; }	
+
+	.logo-tab { width: 345px; }
+
+	.top-bar1 { height: 3px; }
+	.top-bar2 { height: 6px; top: 3px; }
+	.bottom-bar1{ height: 3px; bottom: 62px; }
+	.bottom-bar2 { height: 6px; bottom: 65px; }
+
+	.course-title { font-size: 1.35em; width: calc(100% - 350px); }
+	.module-title {  font-size: 1.35em; z-index: -1; }
+
+	.nav-items { padding-right: 15px; }
+
+	.btn { height: 62px; }
+
+	#extraMenus, .extraMenu, #extraHelp, #extraResource, #extraMain, .extraBtn { display: none; }
+
+	iframe { padding-bottom: 139px; overflow: hidden; }
+}
+
+

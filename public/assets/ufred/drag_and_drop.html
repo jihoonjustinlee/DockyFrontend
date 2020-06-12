@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>drag_and_drop template</title>
+    <script src="interface/js/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="interface/css/style-variables.css">
+    <link rel="stylesheet" type="text/css" href="interface/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="interface/js/jquery.ui.touch-punch.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <script src="interface/js/drag_and_drop.js"></script>
+    <link rel="stylesheet" href="interface/css/drag_and_drop.css">
+    <link rel="stylesheet" href="interface/css/ufred-modal.css">
+    <script>
+      let numItems = 6
+
+      let numAudios = 0
+      
+      let type = "text"
+        
+      let answerArray = ["b","a","c","f","d","e"]
+        
+      let answerContent = ["Aliquip incididunt","Cupidatat nisi ad","Magna ea deserunt","Ad reprehenderit incididunt","Tempor ex ad","Et cillum ipsum"]
+      
+      let dropContent = ["Cillum nulla do enim ullamco mollit id incididunt deserunt amet do est et in fugiat. Sint qui incididunt nisi sunt ea anim occaecat nisi. Sit nulla veniam culpa proident eu officia in enim est ex. Ex aute enim magna pariatur laborum elit et adipisicing. Ex sint nostrud Lorem voluptate nulla tempor cillum ut officia sit dolor occaecat tempor excepteur.",
+        "Laborum pariatur excepteur laborum exercitation consequat aliqua voluptate. Id qui officia ea tempor adipisicing ipsum ex mollit culpa. Reprehenderit eiusmod do commodo proident eu esse aute magna nostrud eiusmod adipisicing aute sint cillum. Sunt dolore officia quis est dolore laboris. Ullamco ipsum cillum officia sint adipisicing fugiat nostrud dolore do sit sint ex.",
+        "Cupidatat ullamco laborum reprehenderit non irure. Magna tempor in duis velit excepteur reprehenderit culpa incididunt deserunt Lorem Lorem. Labore exercitation consectetur elit id sit laborum commodo laboris ad proident excepteur duis tempor laborum. Nisi incididunt veniam ea adipisicing. Eu elit labore ex ad eu velit deserunt duis duis incididunt duis excepteur cupidatat. Quis sunt cupidatat mollit amet anim velit in eu qui do eiusmod proident irure. Ipsum nisi id laboris exercitation eiusmod.",
+        "Cupidatat ad excepteur adipisicing est proident sint. Exercitation incididunt proident quis nostrud occaecat ad in culpa dolor nostrud excepteur. Duis sit amet nostrud voluptate consequat aliquip est non velit nisi dolor. In consequat tempor labore ea. Esse adipisicing quis Lorem ex cupidatat sit laboris et incididunt ad mollit. Nisi adipisicing irure nulla in in consequat sunt.",
+        "Quis aute minim ad occaecat occaecat deserunt eiusmod sint eiusmod et adipisicing tempor exercitation. Eu aute pariatur labore excepteur. Voluptate labore ex sint in aute sit aliqua cupidatat id culpa. Est magna aliqua irure eu qui cupidatat excepteur incididunt ipsum aliquip.",
+        "Exercitation culpa ipsum duis reprehenderit nostrud consectetur culpa nostrud officia cupidatat velit nisi pariatur. Occaecat nulla laborum veniam exercitation. Aute sunt mollit ut ex. Minim deserunt sit deserunt in dolor culpa reprehenderit fugiat exercitation aliqua esse reprehenderit. Enim pariatur veniam mollit occaecat magna proident esse."]  
+    </script>
+  </head>
+  <body>
+    <div class="headerSpacer"></div>
+    <div class="flexBox column">
+      <div class="fullwidth">
+        <h1>drag_and_drop template</h1>
+        <p>Enim pariatur commodo sit non in qui cupidatat excepteur aliquip est. Dolore incididunt et ea Lorem consequat id exercitation laborum sit aute est qui non nulla. Eiusmod pariatur esse excepteur consequat laborum ea tempor tempor do officia. Dolore laboris quis sunt est commodo quis amet sit officia consequat.</p>
+        <p>In this template, <u>the targets can also be images</u>.</p>
+        <p class="directive">Click on a term below and drag it onto the description that best matches its meaning. When you have matched all descriptions, click the ‘Next’ arrow to continue.</p>          
+      </div>
+      <div class="halfHorizontal" style="z-index: 0; display: block;">
+        <div class="droppableContainer flexContainer"></div>
+        <div class="draggableContainer flexContainer"></div>			
+      </div>
+    </div>
+    <div class="modal-container">
+      <div class="modal-content">
+        <div class="header">
+            <h3 class="modal-title">Congratulations!</h3>
+            <div class="close">&times;</div>
+        </div>
+        <div class="content">
+          <p>Click the 'Next' arrow to continue.</p>
+        </div>
+      </div>
+    </div>
+    <div class="ccSpacer"></div>	
+    <script src="assets/js/pages.js"></script>
+    <script src="interface/js/media_control.js"></script>
+    <script src="interface/js/audio_markup_generator.js"></script>  
+  </body>
+</html>

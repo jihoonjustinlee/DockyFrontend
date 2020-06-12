@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!--self_check-->
+	<meta charset="utf-8">
+	<title>Self Check</title>
+	<link rel="stylesheet" href="interface/css/core.css">
+	<link rel="stylesheet" href="interface/css/accordion.css"> 
+	<link rel="stylesheet" href="interface/css/self_check.css"> 
+	<script src="interface/js/jquery.js"></script>
+	<script>
+		
+		// Sets number of questions. This number cannot be smaller than the questionArray/modalArray content size.
+		let numItems = 5; 
+
+		// Sets the correct answers
+		let answerArray = [
+			 [ 
+				 `0` // First option is correct
+			 ],[
+				 `0`, `1`, `2` // First, second, third option all selected is correct
+			 ],[
+				 `1`
+			 ],[
+				 `0`, `1`, `2`, `3`, `4`
+			 ],[
+				 `0`
+			 ]
+		];
+
+		let questionArray = [
+			[ 
+				 `Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit?`, // Question one
+				 `One lorem ipsum dolor sit amet ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit.`,	// Question one answer one
+				 `Two lorem ipsum dolor sit amet.`, // Question one answer two
+				 `Three lorem ipsum dolor sit amet.`// Question one answer three
+			],[
+				 `Lorem ipsum dolor sit amet consectetur adipiscing elit consectetur adipiscing elit?`, // Question two
+				 `One lorem ipsum dolor sit amet.`,
+				 `Two lorem ipsum dolor sit amet lorem ipsum dolor sit amet.`,
+				 `Three lorem ipsum dolor sit amet lorem ipsum dolor sit amet.`,
+				 `Four lorem ipsum dolor sit amet lorem ipsum dolor sit amet.`,
+				 `Five lorem ipsum dolor sit amet.`,
+				 `Six lorem ipsum dolor sit amet.`
+			],[
+				 `Lorem ipsum dolor sit amet?`,
+				 `True`, // Make sure true/false type of question answers has exact string "true/false" or "True/False"
+				 `False`
+			],[
+				 `Lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet?`,
+				 `One lorem ipsum dolor sit amet lorem ipsum dolor sit amet.`,
+				 `Two lorem ipsum dolor sit amet lorem ipsum dolor sit amet.`,
+				 `Three lorem ipsum dolor sit amet lorem ipsum dolor sit amet.`,
+				 `Four lorem ipsum dolor sit amet.`,
+				 `Five lorem ipsum dolor sit amet.`
+			],[
+				 `Lorem ipsum dolor sit amet?`,
+				 `One lorem ipsum dolor sit amet lorem ipsum dolor sit amet.`,
+				 `Two lorem ipsum dolor sit amet.`,
+				 `Three lorem ipsum dolor sit amet lorem ipsum dolor sit amet.`
+			]
+		];
+		
+		// Feedback Box title and content
+		let modalContentArray = [
+
+			["Correct", 
+
+			"Good job!",
+
+			"Q1 INCORRECT answer feedback: lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit."
+			],
+
+			["Correct", 
+
+			"Q2 CORRECT answer feedback: lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+
+			"Please try again."
+			],
+
+			["Correct", 
+
+			"Q3 CORRECT answer feedback: lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+
+			"Please try again."
+			],
+
+			["Correct", 
+
+			"Q4 CORRECT answer feedback: lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+
+			"Please try again."
+			]	,
+
+			["Correct", 
+
+			"Q5 CORRECT answer feedback: lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+
+			"Please try again."
+			]		
+		];
+		
+		// Determine how many NON-INTERACTIVE (auto played) audios are needed, set to negative number to indicate animation timing/custom implementation is required.
+		let numAudios = 2;
+		
+	</script>
+</head>
+
+<body class="customScroll" tabindex="1">
+	<div class="textarea fullWidth accordion">
+		<h1>Self Check</h1>
+		<p>The following questions are intended to help you monitor your own learning. If you have difficulty answering these questions, review the content in this section by returning to the previous page(s), or by selecting the menu to navigate to a section you want to review. </p>
+		<p class="directive">Click on a question to view the details. To indicate your answer, click on the appropriate box. When you have successfully answered all questions, click the ‘Next’ button to continue.</p>
+	</div>
+
+	<div class="psurvey fullWidth">	
+		<!-- content generated -->
+	</div>
+	
+	<script src="interface/js/self_check.js"></script>
+	<script src="assets/js/pages.js"></script>
+	<script src="interface/js/media_control.js"></script>
+	<script src="interface/js/audio_markup_generator.js"></script>
+
+</body>
+</html>

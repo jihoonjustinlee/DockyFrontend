@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+	<head>
+		<!--video_standard-->
+		<title>Video Standard</title>	
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+		<link rel="stylesheet" href="interface/css/jquery-ui.css">
+		<link rel="stylesheet" href="interface/css/core.css">
+		<link rel="stylesheet" href="interface/css/video_standard.css">
+		<script src="interface/js/jquery-3.3.1.min.js"></script>
+		<script src="interface/js/jquery-ui.min.js"></script>
+		<script src="interface/js/video_standard.js" defer></script>
+		<script>
+			// Determine how many audios are needed
+			let numAudios = 1;
+		</script>
+	</head>
+	<body class="customScroll">
+		<h1>Video Standard</h1>
+		<p>We dropped using Video.js. We also need a directive for Minerva video standard page.</p>
+		<p>Et velit magna excepteur esse esse nostrud adipisicing irure labore aute incididunt aliquip. Consectetur fugiat cupidatat esse excepteur consequat veniam in nisi Lorem eu. Ex consectetur id amet officia enim ipsum qui eu eu minim magna. Exercitation officia ullamco adipisicing proident nulla sunt pariatur.</p>
+		<p class="directive">Press ‘Play’ on the video screen. Once you have finished watching the video, click the ‘Next’ button to continue.</p>
+		<div class="container all">
+			<video class="video all" playsinline></video>
+			<div class="playbutton-middle">
+				<img src="interface/images/icon_play2.svg">
+			</div>
+			<div class="panel">
+				<div class="play button">
+					<i class="fas fa-play"></i>
+				</div>
+				<div class="mute button">
+					<i class="fas fa-volume-up"></i>
+				</div>
+				<div class="scrubber volume"></div>
+				<div class="scrubber playback"></div>
+				<div class="time-indicator"></div>
+				<div class="closed-caption button">
+					<i class="fas fa-closed-captioning"></i>
+				</div>
+				<div class="setting button">
+					<i class="fas fa-cog"></i>
+				</div>
+				<div class="fullscreen button">
+					<i class="fas fa-expand"></i>
+				</div>
+			</div>
+		</div>
+		<script src="assets/js/pages.js"></script>
+		<script src="interface/js/media_control.js"></script>
+		<script src="interface/js/audio_markup_generator.js"></script>
+	</body>	
+</html>

@@ -1,0 +1,64 @@
+.vertical-container {
+	width: 100vw;
+}
+
+.textContainer {
+	flex-grow: 1;
+	max-width: 80vw;
+	display: flex;
+	justify-content: left;
+	align-items: center;
+	color:transparent;
+	transition: 
+		max-width 0.5s linear,
+		color 1s linear;
+	-webkit-transition: 
+		max-width 0.5s linear,
+		color 1s linear;
+	-moz-transition: 
+		max-width 0.5s linear,
+		color 1s linear;
+
+	visibility: hidden;
+	overflow: hidden;
+}
+
+.textContainer li::before {
+	visibility: hidden;
+	opacity: 0;
+}
+
+.clicked li::before {
+	visibility: visible;
+	opacity: 1;
+	transition: visibility 1s linear, opacity 1s linear;
+	-webkit-transition: visibility 1s linear, opacity 1s linear;
+	-moz-transition: visibility 1s linear, opacity 1s linear;
+}
+
+.cndButton {
+	width: 20vw;
+	justify-content: center;
+	display:flex;
+	align-items: center;
+	height:auto;
+	line-height: normal;
+	padding: 1vh 0;
+	margin:0;
+}
+
+.cndButton > span {
+	padding: 0 5px;
+}
+
+.textContainer > span {
+}
+
+.textarea.halfHeight{
+	max-height: initial;
+}
+
+.container {
+	margin-bottom: 1vh;
+	justify-content: left;
+}

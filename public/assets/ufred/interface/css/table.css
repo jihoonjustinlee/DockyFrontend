@@ -1,0 +1,6 @@
+html, body, .flexBox {height: 100%;}
+/*.flexBox { display: flex; flex-direction: column;}*/
+.screenText { display: inline-block;}
+table {
+	table-layout: fixed ;
+}

@@ -1,0 +1,32 @@
+
+/* * Variables* */
+
+:root { --primary: #A91E23; --primaryHL: #DC252C; 
+		--secondary: #ffcf48; --secondaryHL: #00AA00; 
+		--tertiary: #878787; --tertiaryHL: #00AA00;
+		--black: #000000; --white: #FFFFFF; --darkGrey: #171717; --midGrey: #2d2d2d; --grey: #373737; --columnGrey: #878787;
+		--textColor: #000000;
+	
+		--tableLightGrey: #e4e4e9; --tableLightGrey2: #b5b6bc;
+	
+		--primaryGradTop: #a91b1b; --primaryGradBottom: #8b1616; 
+		--secondaryGradTop: #ffcf48; --secondaryGradBottom: #f2b300; 
+		--tertiaryGradTop: #878787; --tertiaryGradBottom: #6b6b6b;
+		--darkGradTop: #2d2d2d; --darkGradBottom: #000000; 
+		--greyGradTop: #e4e8eb; --greyGradBottom: #d2d8dd;
+		--lightGradTop: #FFFFFF; --lightGradBottom: #dcdcdc;   
+	
+		--primaryHLGradTop: #cf2525; --primaryHLGradBottom: #ab1b1b; 
+		--secondaryHLGradTop: #00AA00; --secondaryHLGradBottom: #00AA00; 
+		--tertiaryHLGradTop: #00AA00; --tertiaryHLGradBottom: #00AA00;
+		--darkHLGradTop: #00AA00; --darkHLGradBottom: #00AA00; 
+		--lightHLGradTop: #00AA00; --lightHLGradBottom: #00AA00; 
+	
+		--scenarioRed: #A91E23; --scenarioGreen: #8BC542; 
+		--scenarioYellow: #F0CE2F; --scenarioOrange: #DF871F; 
+	
+		--baseFontSize: 16px;
+		--highlight:#ffcf48;
+		--fontFamily: "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	
+}

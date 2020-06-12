@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!--drag_and_drop-->
+	<meta charset="utf-8">
+	<title>Drag and Drop</title>
+	<script src="interface/js/jquery-3.3.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+  	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="interface/js/jquery.ui.touch-punch.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+	<link rel="stylesheet" href="interface/css/core.css">
+	<link rel="stylesheet" href="interface/css/drag_and_drop.css">
+	<script src="interface/js/drag_and_drop.js"></script>
+
+	<script>
+		/** NOTE **/
+		
+		// Sets number of options to drag and drop, 6 is the maximum.
+		let numItems = 3;
+		
+		// Sets droppable type, must be string 'text' or 'image'.
+		let type = 'image';
+		
+		let imageTitle = ['Image Title 1', 'Image Title 2', 'Image title 3', 'Image title 4', 'Image title 5', 'Image title 6']
+
+		// Determines the answer mapping, 'abcdef' is the default. When naming audio files for drag and drop interactive, it must match the answer sequence.
+		let answerArray = [ "c", "d", "a", "b", "e", "f"];
+		
+		// The label on the click and display buttons. If numItems is less than 10, DON'T have to remove the extra options (but you can if you want to make the page cleaner).
+		let answerContent = ["Lorem ipsum dolor sit",
+							 "Lorem ipsum dolor sit",
+							 "Lorem ipsum dolor sit", 
+							 "Lorem ipsum dolor sit",
+							 "Lorem ipsum dolor sit",
+							 "Lorem ipsum dolor sit"];
+		
+		// The droppable content DON'T have to remove the extra options (but you can if you want to make the page cleaner)
+		let dropContent = [
+						   "content 1 <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo cex ea commodo",
+			
+						   "content 2 <br>  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo cex ea commodo",
+			
+						   "content 3 <br>  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo cex ea commodo",
+			
+						   "content 4 <br>  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo cex ea commodo",
+			
+						   "content 5 <br>  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo cex ea commodo",
+			
+						   "content 6 <br>  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo cex ea commodo"];
+		
+		// Feedback Box title and content
+		let modalContent = ["Congratulations!", 
+							"You have successfully completed this exercise. "];
+	
+		// Determine how many non-interactive audios are needed;
+		let numAudios = 2;
+	
+	</script>
+</head>
+<body class="customScroll" tabindex="0">
+	<div class="flexBox column">
+		<div class="fullwidth">
+			<h1>Drag and Drop</h1>
+			<p><strong>Notes to our adorable ID crew:</strong></p>
+			<ol>
+					<li><span>The draggable words has a limitation of <strong>fifteen charactors</strong>.</span></li>
+					<li><span>The droppable paragraph (text version) has a limitation of <strong>two hundred charactors</strong>.</span></li>
+					<li><span>The droppable area on top can switch between <strong>text and image</strong> (One type at a time).</span></li>
+					<li><span> Supports up to <strong>six items</strong>.</span></li>
+
+			</ol>
+			<p class="directive">Drag each item below to the corresponding section.</p> 
+		</div>
+		
+		<div class="halfHorizontal" style="z-index: 0; display: block;">
+
+			<div class="droppableContainer flexContainer"></div>
+
+			<div class="draggableContainer flexContainer"></div>			
+			
+			<div id="myModal" class="modal" style="display:none;">
+				<div class="modal-content customScroll">
+					<h3 class="modal-title"></h3>
+					<hr style="border-color: #595a5d; margin: 0 2vw;">
+					<p class="replaceble"></p>
+					<p class="directive">Click the 'Next' button to continue.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script src="assets/js/pages.js"></script>
+	<script src="interface/js/media_control.js"></script>
+	<script src="interface/js/audio_markup_generator.js"></script>
+	
+</body>
+</html>

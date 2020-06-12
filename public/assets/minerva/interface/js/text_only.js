@@ -1,0 +1,1 @@
+//new SimpleBar($('.textarea')[0], { autoHide: false });

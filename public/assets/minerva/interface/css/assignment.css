@@ -1,0 +1,65 @@
+iframe.assignment{
+  outline: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  border: none;
+}
+
+button.simpleButton:focus{
+  background: linear-gradient(#ff9b4d, #ff794d);
+}
+
+.half-vertical-left{
+	width: 50vw;
+}
+
+.half-vertical-right{
+	width: 50vw;
+	height: 100vh;
+	padding: 2em 2em 2em 0;
+}
+
+.half-vertical-image{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+button.simpleButton { background: #f3743a; font-size: 1em; background: -webkit-linear-gradient(#f3743a, #d95b20);	background: -o-linear-gradient(#f3743a, #d95b20); 
+  background: -moz-linear-gradient(#f3743a, #d95b20);	background: linear-gradient(#f3743a, #d95b20); color: #ffffff; cursor: pointer;
+  padding: 10px; width: 12em; text-align: center; font-weight: bold; margin: .0vh 0.5vw; border: 0px; outline: none; border-radius: 45px;
+    -moz-box-shadow: inset 1px 1px 1px rgba(255, 255, 255, .4), inset -1px -1px 1px rgba(0, 0, 0, .2);
+  -webkit-box-shadow: inset 1px 1px 1px rgba(255, 255, 255, .4), inset -1px -1px 1px rgba(0, 0, 0, .2);
+  box-shadow: inset 1px 1px 1px rgba(255, 255, 255, .4), inset -1px -1px 1px rgba(0, 0, 0, .2);
+  margin-left: 40%;	
+  }
+button.simpleButton.active, button.simpleButton:hover { background: #ff9b4d;	background: -webkit-linear-gradient(#ff9b4d, #ff794d);
+  background: -o-linear-gradient(#ff9b4d, #ff794d); background: -moz-linear-gradient(#ff9b4d, #ff794d); background: linear-gradient(#ff9b4d, #ff794d);}
+button.simpleButton.centeredHorizontal { margin-left: 50%; transform: translateX(-50%); margin-bottom:2em; }
+
+@media only screen and (max-width: 1024px) {
+	.flexContainer {
+		flex-direction: column;
+	}
+	
+	.half-vertical-left, .half-vertical-right{
+	  width: 100%;
+	}
+	
+	.half-vertical-right {
+		height: 50vh;
+		padding: 0em 1em;
+	}
+	
+
+}
+
+@media only screen and (max-width: 480px){
+  .half-vertical-right{
+    display: none
+  }
+}

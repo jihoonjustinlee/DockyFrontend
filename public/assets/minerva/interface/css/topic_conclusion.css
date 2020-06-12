@@ -1,0 +1,18 @@
+#splashTitleContainer{
+  position: absolute;
+  top: 50vh;
+  transform: translateY(-50%);
+  padding: 3.5em 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+}
+
+#splashTop{
+  font-size: 2em;
+}
+
+#splashMiddle{
+  font-size: 1.5em;
+}

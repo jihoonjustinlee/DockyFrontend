@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>self_check template</title>
+    <link rel="stylesheet" href="interface/css/style-variables.css">
+    <link rel="stylesheet" type="text/css" href="interface/css/style-interactive.css">
+    <link rel="stylesheet" type="text/css" href="interface/css/style.css">
+    <script src="interface/js/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="interface/css/self_check.css">
+    <script src="interface/js/self_check.js" defer></script>
+    <script>
+      let numItems = 5
+    
+      let type = "basic";
+
+      let answerArray = [["1"],["0"],["1"],["2"],["0"]]
+
+      let questionArray = [["Organizational climate is deeply rooted and resistant to change.","True.","False."],["Which one of the following terms refers to the immediate sense individuals experience when entering an organization, such as the physical look of the workplace and attitudes exhibited by employees?","Organizational climate.","Organizational culture.","Organizational structure.","Organizational function."],["Which one of the following terms refers to an evolved context towards safety within which a given situation is embedded by long-standing values, beliefs, and reinforced behaviours, thereby producing an organization’s behavioural norms?","Safety climate.","Safety culture.","Organizational safety.","Functional safety."],["What two concepts drive the basis of behaviour management in OHS management systems?","Self-awareness and motivation.","Motivation and organizational behaviour.","Safety climate and safety culture.","Organizational climate and organizational culture."],["The ultimate goal of organizational behaviour is to integrate and apply behavioural and social sciences to real-world problems in order to improve the performance of people, groups, and organizations, and to improve the overall quality of work life.","True.","False."]]
+
+      let modalContentArray = [["Correct","Placeholder feedback","Please try again."],["Correct","Placeholder feedback","Please try again."],["Correct","Placeholder feedback","Please try again."],["Correct","Placeholder feedback","Please try again."],["Correct","Placeholder feedback","Please try again."]]
+    </script>
+  </head>
+  <body>
+    <div class="textarea">
+      <h1>self_check template</h1>
+      <p>The following questions are intended to help you monitor your own learning. If you have difficulty answering these questions, review the content in this section by returning to the previous page(s), or by selecting the menu to navigate to a section you want to review. </p>
+      <p class="directive">Select the correct answer from the options provided. To proceed to the next question, click the right-facing arrow. Then, click the ‘Next’ arrow to continue.</p>
+    </div>
+    <div class="container">
+      <div class="vertical-align">
+        <a class="prevSlide" onclick="plusSlides(-1)"></a>
+      </div>
+      <div class="swipe-container"></div>
+      <div class="vertical-align">
+        <a class="nextSlide" onclick="plusSlides(1)"></a>
+      </div>
+    </div>
+    <script src="interface/js/media_control.js"></script>
+  </body>
+</html>

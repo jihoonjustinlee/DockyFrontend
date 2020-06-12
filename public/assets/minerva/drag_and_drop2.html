@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Drag and Drop 2</title>
+  <script src="interface/js/jquery-3.3.1.min.js"></script>
+  <script src="interface/js/jquery-ui.min.js"></script>
+  <script src="interface/js/jquery.ui.touch-punch.min.js"></script>
+  <link rel="stylesheet" href="interface/css/core.css">
+  <link rel="stylesheet" href="interface/css/drag_and_drop2.css">
+  <script src="interface/js/drag_and_drop2.js" defer></script>
+  <script>
+    let numItems = 5
+
+    let answerArray = [ "c", "d", "a", "b", "e", "f"];
+
+    let answerContent = [
+      `jm6UG0nU Qtz2M7AIe 47Zu7a C`, 
+      `lorem ipsum D`, 
+      `lorem ipsum A`, 
+      `lorem ipsum B`,
+      `lorem ipsum E`, 
+      `lorem ipsum F`
+    ]
+
+    let dropContent = [
+      `Answer: A<br>Nulla minim deserunt do ea. Non laborum sunt officia officia magna fugiat voluptate culpa dolor nisi dolore pariatur ullamco. Culpa ea qui Lorem dolore consequat consequat adipisicing labore minim culpa. Veniam amet laboris exercitation Lorem tempor quis elit nostrud eu do cillum.`,
+
+      `Answer: B<br> Ex irure proident tempor sunt commodo non irure aliquip aute Lorem dolore Lorem. Fugiat aute aliqua magna do aute sunt. Sunt voluptate nulla laboris cillum labore voluptate irure ex duis ipsum enim ea ex. Cillum ullamco ex officia pariatur aliquip dolore occaecat id labore enim commodo. Sit tempor esse mollit elit enim culpa excepteur incididunt proident do. Culpa sit laborum cillum ex culpa ipsum nostrud veniam pariatur fugiat id do elit cillum.`,
+
+      `Answer: C<br> Amet irure quis commodo est aliquip magna reprehenderit deserunt qui culpa amet irure irure excepteur. Reprehenderit velit dolore amet officia deserunt. Fugiat et id proident amet fugiat. Do mollit aliquip veniam tempor qui proident voluptate dolor quis. Ullamco consectetur excepteur ipsum esse incididunt aliquip do.`,
+
+      `Answer: D<br>Cillum velit ipsum ex labore consequat duis eu labore esse voluptate. Officia culpa qui magna ad enim exercitation. Consectetur deserunt pariatur elit et consectetur sit ipsum fugiat excepteur.`,
+
+      `Answer: E<br>Nisi labore aute sunt culpa mollit ea officia esse. Sint et dolore ullamco id pariatur est eu aliquip dolor sit. Eu dolore Lorem in id ipsum anim ea irure fugiat do consequat ut. Ipsum in aliquip sint nulla amet eu ex elit fugiat nostrud et nisi. Culpa amet laborum non deserunt.`,
+
+      `Answer: F<br>Ullamco irure consequat pariatur proident ex tempor elit qui id cillum velit culpa fugiat proident. Dolor reprehenderit dolor proident cillum. Sint dolor exercitation Lorem dolor laborum ea.`
+    ]
+	
+	// Determine how many non-interactive audios are needed;
+		let numAudios = 1;
+  </script>
+</head>
+
+<body class="customScroll" tabindex="0">
+  <div id="myModal" class="modal" style="display:none;">
+    <div class="modal-content customScroll">
+      <h3 class="modal-title">Congratulation!</h3>
+      <hr style="border-color: #595a5d; margin: 0 2vw;">
+      <p class="replaceble">You have successfully completed this exercise.</p>
+      <p class="directive">Click the 'Next' button to continue.</p>
+    </div>
+  </div>
+  <h1 tabindex="1">Drag and Drop 2</h1>
+  <p tabindex="1">Drag and Drop version 2 compatible with RapidGen</p>
+  <p tabindex="1">Character limit when there are 6 draggable words: <b>around 26 characters</b></p>
+  <p tabindex="1">Character limit when there are 5 draggable words: <b>around 26 characters</b></p>
+  <p tabindex="1">Character limit when there are 4 draggable words: <b>around 35 characters</b></p>
+  <p tabindex="1">Character limit when there are 3 draggable words: <b>around 50 characters</b></p>
+  <p tabindex="1">Character limit when there are 2 draggable words: <b>N/A</b></p>
+  <p tabindex="1">Character limit when there are 1 draggable words: <b>N/A</b></p>
+  
+  <p class="directive" tabindex="1">Drag each item below to the corresponding section.</p>
+  <div class="container">
+    <div class="draggable-wrapper"></div>
+    <div class="droppable-wrapper"></div>
+  </div>
+  <script src="assets/js/pages.js"></script>
+  <script src="interface/js/media_control.js"></script>
+  <script src="interface/js/audio_markup_generator.js"></script>
+  <style>
+    h1:focus, p:focus{
+      box-shadow: 0 0 0 2px red inset;
+    }
+  </style>
+</body>
+
+</html>

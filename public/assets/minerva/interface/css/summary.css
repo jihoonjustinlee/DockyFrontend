@@ -1,0 +1,69 @@
+.half-vertical-left{
+  width: 50vw;
+}
+
+.half-vertical-right{
+  width: 50vw;
+  height: 100vh;
+  padding: 2em 2em 2em 0;
+}
+
+.half-vertical-image{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 60%;
+}
+
+button.simpleButton {
+	background: linear-gradient(var(--secondaryGradTop), var(--secondaryGradBottom));
+	/* Edge compatability */
+	background: linear-gradient(#f3743a, #d95b20);
+	color: #ffffff;
+	cursor: pointer;
+	padding: 12px;
+	width: 150px;
+	font-weight: bold;
+	font-size: 1em;
+	border: 0px;
+	outline: none;
+	border-radius: 45px;
+	box-shadow: inset 1px 1px 1px rgba(255, 255, 255, .2), inset -1px -1px 1px rgba(0, 0, 0, .1);
+	display: flex;
+	justify-content: center;
+	margin:0 auto;
+}
+
+button.simpleButton:hover, button.simpleButton:focus { 
+	background: linear-gradient(var(--secondaryHLGradTop), var(--secondaryHLGradBottom));
+	background: linear-gradient(#ff9b4d, #ff794d);
+	box-shadow: inset 1px 1px 1px rgba(255, 255, 255, .2), inset -1px -1px 1px rgba(0, 0, 0, .2);
+}
+
+button.simpleButton.active { 
+	background: linear-gradient(var(--tertiaryGradTop), var(--tertiaryGradBottom));
+	background: linear-gradient(#07bad2, #05a7bb);
+}
+
+
+@media only screen and (max-width: 1024px) {
+	.flexContainer {
+		flex-direction: column;
+	}
+	
+	.half-vertical-left, .half-vertical-right{
+	  width: 100%;
+	}
+	
+	.half-vertical-right {
+		height: 50vh;
+		padding: 2em 1em 0 1em;
+	}
+
+}
+
+@media only screen and (max-width: 480px){
+  .half-vertical-right{
+    display: none
+  }
+}

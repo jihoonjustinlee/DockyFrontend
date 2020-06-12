@@ -1,0 +1,12 @@
+.halfVertical{
+	background-image: url(../../interface/images/summary.jpg);
+}
+.cndButton.basic {
+	margin-bottom: 2vh;
+}
+
+@media (max-width: 1023px) and (min-width: 768px) and (orientation: portrait){
+	p{
+		font-size: 1em !important;
+	}
+}

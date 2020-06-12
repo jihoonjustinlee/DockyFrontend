@@ -1,0 +1,113 @@
+/* add this to the html */
+
+/* <div class="modal-container">
+    <div class="modal-content">
+        <div class="header">
+            <h3 class="modal-title">Title</h3>
+            <div class="close">&times;</div>
+        </div>
+        <div class="content">
+            
+        </div>
+    </div>
+</div> */
+
+
+/* add a click event listener to open the modal-container class. any buttons are fine*/
+/* example */
+
+/* $('.cndButton.basic').click(function(){
+  $('.modal-container').fadeIn().css('display','flex');
+}) */
+
+/* add a click event listener to close button in order to close the .modal-container */
+
+/* $('.header .close').click(function(){
+  $('.modal-container').fadeOut();
+}) */
+
+
+.modal-container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  align-items:center;
+  justify-content: center;
+}
+
+.modal-content{
+  background: linear-gradient(#a91b1b, #8b1616);
+  color: white;
+  border-radius: 30px;
+  width: 200px;
+  padding: 30px;
+  width: 75%;
+  max-width: 800px;
+}
+
+.header{
+  display: flex;
+  align-items: top;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+
+.header .modal-title{
+  color: white;
+  padding: 0;
+  margin: 0;
+  margin-right: 0.5em;
+  font-size: 2em;
+}
+
+.header .close{
+  font-size: 2.5em;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content p{
+  padding: 0;
+}
+
+.content ul, content ol{
+  margin-left: 2vw !important;
+}
+
+ul li::before{
+  color: #ffffff;
+}
+
+
+.header .close:hover{
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+
+@media (max-width: 1824px){
+  .header .modal-title{
+    font-size: 1.8em;
+  }
+}
+
+@media (max-width: 1023px){
+  .header .close{
+    font-size: 2.3em;
+  }
+
+  .header .modal-title{
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 480px){
+  .header .modal-title{
+    font-size: 1.2em;
+  }
+}

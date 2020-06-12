@@ -1,0 +1,56 @@
+table {
+  table-layout: fixed ;
+}
+
+.tableHeader {
+  background: linear-gradient(#005097, #003b76);
+  color: white;
+  font-size: 1.25em;
+  font-weight: bold;
+  padding: 0.5em;
+  text-align: center;
+}
+
+.table-users {
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  max-width: calc(100% - 4em);
+  margin: 1em auto;
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+}
+table td, table th {
+  font-size: 1em;
+  color: #ffffff;
+  padding: 10px;
+}
+table td {
+  color: #000000;
+  text-align: center;
+  vertical-align: top;
+}
+
+table th {
+  background: linear-gradient(#059cbf, #04819e);
+}
+table tr:nth-child(2n) {
+  background-color: white;
+}
+table tr:nth-child(2n+1) {
+  background-color: #e4e4e9;
+}
+
+@media screen and (max-width: 1820px) {
+
+	table td, table th {
+		font-size: 1em;
+		padding: 7px;
+	}
+
+	.tableHeader {
+		font-size: 1.15em;
+	}
+}

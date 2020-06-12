@@ -1,0 +1,56 @@
+.vertical-container {
+	width: 66vw;
+	align-items: center;
+	margin:0 auto;
+	overflow-x: hidden;
+}
+
+.cndButton {
+	width:100%;
+	max-width: 100%;
+	margin-top:0;
+
+}
+
+.textContainer {
+	max-width:66vw;
+	padding:1.5em;
+}
+
+.unclickable {
+	cursor: auto;
+}
+
+.wrapper {
+	width: calc( 100vw - 5px);
+}
+
+img {
+	opacity: 0;
+	position:relative;
+	bottom:50px;
+	width: 50px;
+	transition: bottom 0.5s ease-out;
+	-webkit-transition: bottom 0.5s ease-out;
+	-moz-transition: bottom 0.5s ease-out;
+}
+
+.greyGrad {
+	transition: opacity 0.5s ease-out;
+	-webkit-transition: opacity 0.5s ease-out;
+	-moz-transition: opacity 0.5s ease-out;
+	opacity: 0; 
+	height: 0;
+	align-items: start;
+	z-index:999;
+}
+
+@media only screen and (max-width: 1024px) {
+	.vertical-container {
+		width: 90vw;
+	}
+
+	.textContainer {
+		max-width:84vw;
+	}
+}

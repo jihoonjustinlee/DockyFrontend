@@ -1,0 +1,34 @@
+@media only screen and (min-width: 1337px) {
+	.video-js .vjs-tech{
+		width: 38vw;
+	}
+}
+@media only screen and (max-width: 1337px){
+	.vjs-control-bar{
+		width: 44vw !important;
+	}
+}
+@media only screen and (max-width: 1023px){
+	.vjs-control-bar{
+		width: 49vw !important;
+	}
+}
+@media only screen and (max-width: 1023px) and (orientation: portrait){
+	.vjs-control-bar{
+		width: 90% !important;
+	}
+}
+@media only screen and (max-width: 959px) and (orientation: landscape){
+	.vjs-control-bar{
+		width: 98% !important;
+	}
+}
+@media only screen and (max-width: 767px){
+	.vjs-control-bar{
+		width: 98% !important;
+	}
+}
+@media only screen and (min-width: 1024px) and (max-width: 1824px) and (orientation: landscape){
+	.videoContainer.textAndVideo.square .vjs-control-bar { width: 36vw; }
+}
+		

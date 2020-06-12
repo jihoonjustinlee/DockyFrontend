@@ -1,0 +1,667 @@
+/* *** --------------------Main Menu Css-------------------- *** */
+/*
+	Note to future Dev: the CSS uses a lot of "calc". The major bennift of that is to create super fluid responsiveness without the need of many breakpoints. The breakpoints are only used to dertemine major layout shifts, and can be easily modified. The downside is the slight decrease perfermance, but such increase of processing time (on magnitude of MSs) are negligible - Bill 
+*/
+
+
+/* 
+	Bill was forced to add one pixel to simple bar due to the way chrome calculates fractional pixel. Remove this and chrome will display one pixel of default scroll bar at certain widths 
+	Update1: The below attempt would create another bug, so I modifed simplebar-v3.0.0 directly. This is very dangerous and should be avoided if anyone has anyother alternative solution.
+	Update2: We dumped simplebar.
+
+*/
+
+body {
+	height: calc(100vh - var(--headerHeight));
+}
+
+
+/* scroll */
+.navigationContainer {
+/*	overflow:auto;*/
+}
+
+.scrollContainer > div {
+	margin-left:15px;
+	width: 65vw;
+}
+
+.gDefinitionContainer.scrollContainer {
+	height:100%;
+}
+
+
+/* Header */
+.header-container{
+	height: var(--headerHeight); 
+	width: 96vw; 
+	display:flex;
+	justify-content: space-between;
+	margin:auto;
+}
+
+.header__logo {
+	display:flex;
+	width:30%;
+	align-items: center;
+}
+.header__logo:hover, .header__logo:focus{cursor: pointer; outline : red solid 2px !important;}
+.header__logo > img{
+	height:75%;
+}
+
+.header__title {
+	display:flex;
+	align-items: center;
+	max-width: 70%;
+}
+
+.header__title h2 {
+	color: var(--primary);
+}
+
+
+/* Main - Middle component */
+.mainMenuContainer{
+	background: rgba(0,0,0,0.9); 
+	width: 100%; 
+	height: 100%; 
+	display: flex;
+	padding-top: calc(20px + 3vh);
+	padding-bottom: calc(30px + 3vh);
+	justify-content: space-evenly;
+}
+
+.left, .right, .middle {
+	display:flex;
+}
+
+.middle {
+	border-left: 1px solid var(--textColor);
+	border-right: 1px solid var(--textColor);
+	overflow: hidden;
+/*	flex: 1.5 1.5 70vw;*/
+	flex-direction: column;
+	width:70vw;
+	height:100%;
+}
+
+.left, .right {
+/*	flex: 1 1 10vw;*/
+	width:10vw;
+	justify-content: center;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	height: 100%;
+}
+
+.scrollContainer {
+	width: calc(65vw + 28px);
+	height: calc(100% - 5px - 2vh - 1em); /*  */
+}
+
+.sectionTitle {
+	color: white;
+	font-weight: bold;
+}
+		
+/* Main - Left component */
+.menuItemsContainer{
+	text-align: center;
+}
+
+.menuItem{
+	padding: 10px 0;
+}	
+
+.link{
+	color: rgba(242,101,36, 0.45); 
+	font-weight: bold;
+}
+
+.link:hover, .link:focus {
+	color: rgb(242,101,36); cursor: pointer;
+}
+
+.linkActive{
+	color: var(--primaryHL); 
+	font-weight: bold; 
+	pointer-events: none
+}
+
+.menuDisabled{
+	color: gray
+}
+
+/* Main - Right component */	
+.menuClose { 
+	width: calc(100vw * 0.008982 + 22.754491px); 
+	height: calc(100vw * 0.008982 + 22.754491px); 
+	border-radius: calc(100vw * 0.008982 + 22.754491px);
+	background: url(../images/icon_close.svg) center/50% no-repeat, linear-gradient(#f3743a, #d95b20);			
+}
+
+.menuCloseMobile {
+	display:none;
+}
+
+.menuClose:hover, .menuClose:focus{ 
+	background: url(../images/icon_close.svg) center/50% no-repeat, linear-gradient(#ff9b4d, #ff794d); 
+	cursor: pointer;
+}
+
+
+/* Navigation menu */
+.navDirective{
+	margin: 0; 
+	color: var(--primaryHL); 
+	font-weight: bold;
+	width: 65vw;
+	padding: 0;
+	margin-bottom: calc(5px + 2vh);
+}
+	
+.psurvey { 
+	width: 65vw;
+	margin-left: 15px;
+}
+
+.moduleTitle {
+	max-width:90%;
+	text-align: left;
+}
+		
+button.accordion{
+	margin:0;
+	display:flex;
+	align-items: center;
+	width:100%;
+	justify-content: space-between;
+}
+
+button.accordion::after{
+	content: none
+}
+		
+div.panel, div.panel.show{
+	background-color: unset; 
+	color: white;
+	width: 95%;
+}
+
+		
+.lockDirective{
+	padding: 5px 0;
+/*	margin: 0 17px;*/
+	border-bottom: 1px solid var(--textColor);
+}
+
+.lockDirective p{
+	font-weight: bold; 
+	color: var(--primaryHL); 
+	padding: 0; 
+	margin: 0;
+}
+		
+.progCircle {
+	width:20px;
+	height:20px;
+}
+
+.iconGrouper {
+	display: flex;
+	color:white;
+	position:absolute;
+	bottom: calc(5px + 1.5vh); 
+	width: calc(100vw * 0.1407 + 209.8204px);
+	justify-content: space-between;
+}
+
+.iconContainer {
+	display: flex;
+	align-items: center;
+}
+	
+
+.icon {
+	width: calc(0.00180 * 100vw + 16.55090px); 
+	height: calc(0.00180 * 100vw + 16.55090px);
+	margin-right: calc(0.005988 * 100vw - 1.497px);
+}
+
+.incomplete { 
+	background: url(../images/icon_incomplete.svg) center/contain no-repeat;
+}
+
+.complete{ 
+	background: url(../images/icon_complete.svg) center/contain no-repeat;
+}
+
+.inprogress{
+	background: url(../images/icon_inProgress.svg) no-repeat center; 
+	background-size: contain;
+}
+		
+	
+/* navigation >> accordion children */
+div.panel.show{
+	/* padding: 0;  */
+	padding: 0 0.5em;
+	margin: 0;
+}	
+
+.topic {
+	padding: 5px 0;
+	border-bottom: 1px solid var(--textColor);
+}
+
+.topic:last-child {
+	border-bottom: none;
+}
+
+		
+.topicTitle {
+	display: flex;
+	cursor: pointer; 
+	pointer-events: none; 
+	padding: 15px 25px; 
+	border-radius: 45px; 
+	font-weight: bold;
+	align-items: center;
+}
+
+.topicTitleText {
+	flex: 1 5 calc(0.5586 * 100vw - 41.1365px);
+}
+		
+.topicLock {
+	background:  url(../images/icon_lock.svg) center/contain no-repeat; 
+	width: 0.85em; 
+	height: 0.85em; 
+	flex: 1 1 5%;
+}
+
+/*This class is needed because the way the page lock system was built, once we upgrade the logic scripts, we would not need this class anymore*/
+.topicLockSpacer {
+	background:  url(../images/icon_lock.svg) center/contain no-repeat; 
+	width: 0.85em; 
+	height: 0.85em; 
+	flex: 1 1 5%;
+	visibility: hidden;
+}
+		
+.topicTitleArrow{
+	background:  url(../images/chevron.svg) center/contain no-repeat; 
+	width: 0.85em; 
+	height: 0.85em;
+	flex: 1 1 5%;
+	transition: transform 0.3s linear;
+}
+
+.topicTitle.active > .topicTitleArrow { 
+	transform: rotate(90deg);
+}
+
+.topicPage{
+	margin-left: 7vw; 
+	margin-top: 5px; 
+	padding: 5px 0 5px 30px; 
+	border-radius: 20px; 
+	cursor: pointer; 
+	display: none;  
+}
+		
+.topicTitle:hover, .topicPage:hover, .topicTitle:focus, .topicPage:focus{
+	background: var(--textColor);
+}
+		
+.topicPageActive{ 
+	position: relative;	
+}
+		
+.topicPageActive::before { 
+	background: url(../images/icon_currentPage.svg) center/contain no-repeat; 
+	content: ""; 
+	width: 1em; 
+	height: 1em; 
+	position: absolute; 
+	left: 8px;
+	margin-top: 1px; 
+}	
+
+.topicPageLock{
+	color: rgba(255,255,255,.25);
+	pointer-events: none;
+}
+
+/* Resources */
+.resCategory, .resource {
+	width:65vw;
+}
+
+.resCategory {
+	padding: 1vh 0;
+	border-bottom: 1px solid var(--textColor);
+	margin-left: 15px;
+}
+
+.resCategory:not(:first-child) {
+	margin-top:5vh;
+}
+
+.resource{
+	color: white;
+	min-height: 60px;
+	border-bottom: 1px solid var(--textColor);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-left: 15px;
+}
+
+.resTitle {
+	flex-basis: 60%;
+	word-wrap:break-word;
+}
+
+.resBtn{
+	background: linear-gradient(#f3743a, #d95b20); 
+	padding: 7px 30px; 
+	border-radius: 20px; 
+	font-weight: bold;
+	color: white;
+}
+
+.resBtn:hover, .resBtn:focus{
+	background: linear-gradient(#ff9b4d, #ff794d); 
+	cursor: pointer;
+	text-decoration: none;
+	border:none !important; /* Bill no longer has standards. When the core CSS is cleaned up, may want to fix this one if have time */
+}
+
+			
+/* Glossary */
+.glossCon {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: calc(100% - 1em - 5px - 2vh);
+}
+
+.gEntryContainer{
+	display: flex;
+	justify-content: space-between;
+	width: 65vw;  /*to deal with simple bar misalignment*/
+	align-self: center;
+	padding-bottom: calc(5px + 2vh);
+	border-bottom: 1px solid var(--textColor);
+}		
+
+.gEntry{
+	font-size: 1em;
+}
+
+.gDefinitionContainer {
+/*	width: calc(95% - 34px);*/
+	padding-left:0;
+	align-self: center;
+}
+
+.gTitle{
+	display:none;
+	color: white;
+	font-weight: bold; 
+	margin-top:20px;
+}
+
+.gDef{
+	display:none;
+	color: white; 
+	padding: 20px 0;
+	border-bottom: 1px solid var(--textColor);
+}
+
+.gDef:last-of-type {
+	padding-bottom: 0;
+}
+		
+		
+/*  Help menu */
+.helpCategory {
+	width: calc(95% - 34px);
+}
+
+.helpImgContainer {
+	height: 50%;
+	width: calc(95% - 34px);
+	border-top: 1px solid var(--textColor);
+	border-bottom: 1px solid var(--textColor);
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	margin: calc(5px + 2vh) 0;
+	max-height: 300px;
+	min-height: calc(100vw * 0.05988 + 85.02994px);
+}
+
+.helpImg{
+	height: calc(100% - 10px); 
+	width: 100%;
+	background: url(../images/minerva_help_image.svg) center/contain no-repeat; 
+}
+		
+.helpItemContainer{
+	
+}
+
+.helpItemWrapper {
+	display:flex;
+	align-items: center;
+	margin-bottom: 1vh;
+}
+		
+.helpItemNumber{
+	background: linear-gradient(var(--tertiaryHLGradTop), var(--tertiaryHLGradBottom)); 
+	color: white; 
+	width: calc(100vw * 0.00898 + 17.75449px); 
+	height: calc(100vw * 0.00898 + 17.75449px); 
+	border-radius: calc(100vw * 0.00898 + 17.75449px); 
+	line-height: calc(100vw * 0.00898 + 17.75449px);  
+	font-weight: bold; 
+	text-align: center;
+	margin-right: calc(100vw * 0.00599 + 3.50299px);
+}
+
+.helpItemText{
+	color: white;
+	flex-basis: 90%;
+}
+
+/*----------- responsive -----------*/
+
+/* css based on the width of the screen */	
+@media (max-width: 1024px){
+	/* main */
+	.hideAtTablet {
+		display:none;
+	}
+	
+	/* help */
+	.helpImg { 
+		background: url(../images/minerva_help_image_t.svg) center/contain no-repeat; 
+	}
+}
+		
+		
+/* main responsive part for screen size smaller than 640px : re-layout the main menu */ 
+@media (max-width: 639px){
+	
+	/* main */
+	.hideAtMobile {
+		display:none;
+	}
+	
+	.mainMenuContainer {
+		flex-direction: column;
+		padding-top: 1vh;
+	}
+	
+	.left {
+		flex: none;
+		justify-content: space-between;
+		align-items: center;
+		padding-bottom: 1vh;
+		border-bottom: 1px solid var(--textColor);
+		width: 90%;
+		align-self: center;
+	}
+	
+	.middle {
+		border-left: none;
+   		border-right: none;
+		width:100vw;
+		height: calc(100% - 20px - 1em - 1vh);
+
+	}
+	
+	.right {
+		display:none;
+	}
+	
+	.scrollContainer {
+		width: calc(90vw + 28px);
+		height: calc(100% - 4vh - 2em);
+	}
+	.scrollContainer > div{
+		width: 90vw;
+	}
+	
+	.menuCloseMobile {
+		display:flex;
+	}
+
+	.menuItemsContainer {
+		display: flex;
+		flex-wrap: wrap;
+		width: calc(90% - 20px);
+		justify-content: space-between;
+	}
+	
+	/* Navigation */
+	.navDirective {
+		margin:2vh 0;
+		width: 90%;
+	}
+	
+	div.panel, div.panel.show {
+		/* width: 85%; */
+		width: 87%;
+	}
+	
+	.psurvey { 
+		width: 90vw;
+		margin-left: 15px;
+	}
+	/* resources*/
+	.resCategory, .resource {
+		width:90vw;
+	}
+	
+	/* help */
+	.helpImgContainer, .helpCategory {
+		width: 90%;
+	}
+
+	.helpImgContainer{
+		height: 100%;
+	}
+	
+	.helpImg { 
+		background: url(../images/minerva_help_image_m.svg);
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	/* glossary */
+	.glossCon {
+		flex-direction: row;
+		height: calc(100% - 3em - 4vh);
+		padding-left: 8.5px;
+		width: calc(90vw + 28px);
+		margin-left:15px;
+	}
+	
+	.gEntryContainer {
+		flex-direction: column;
+		padding-bottom: 0;
+		width: auto;
+		align-self: auto;
+		border-bottom: none;
+		padding-right: 8.5px;
+		border-right: 1px solid var(--textColor);
+	}
+	
+	.gTitle:first-of-type {
+		margin-top:0;
+	}
+	
+	.gDefinitionContainer {
+		width: calc(90vw - 1em);
+	}
+	
+	.gDefinitionContainer > div {
+		width: calc(90vw - 1em - 21px);
+		margin-left: 8.5px;
+	}
+
+}
+
+@media (max-width: 250px){
+	/* Navigation */
+	.menuItemsContainer {
+		justify-content: space-evenly;
+	}
+	
+	.iconGrouper {
+		flex-wrap: wrap;
+		width:100%;
+		justify-content: space-around;
+	}
+}
+
+/* css based on the height of the screen */
+@media (max-height: 632px) {
+	/* glossary */
+	.gEntryContainer {
+		flex-wrap: wrap;
+		padding-right: 17px;
+		justify-content: flex-start;
+	}
+}
+
+@media (max-height: 632px) and (min-width: 639px) {
+	/* glossary */
+	.gEntryContainer {
+		justify-content: space-between;
+	}
+}
+
+@media (max-height: 419px){
+	/* main */
+	.header-container {
+		display:none;
+	}
+	.mainMenuContainer {
+		height:100%;
+	}
+	
+	/* glossary */
+	.gEntryContainer {
+		padding-right: 25.5px;
+	}
+}

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="UTF-8">
+	<title>Course Title</title>
+	<link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">	
+	<link rel="stylesheet" href="interface/css/accordion.css">
+	<link rel="stylesheet" href="interface/css/style-index.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">	
+	<script src="interface/js/jquery-3.3.1.min.js"></script>
+	<script src="interface/js/TweenMax-1.20.4.min.js"></script>
+	
+	<script src="interface/js/index.js"></script>
+	<script src="assets/js/cctext.js"></script>
+	<script src="assets/js/pages.js"></script>
+	<script src="interface/js/audio-control.js"></script>
+
+	<script src="interface/js/sessionTime.js"></script>
+	<script type="text/javascript" src="interface/js/SCORM_API_wrapper.js"></script>
+
+	<link rel="stylesheet" href="interface/css/core.css">
+	
+	<!-- ACCESSIBILITY -->
+	<link rel="stylesheet" href="interface/css/accessibility.css" />
+	<script src="interface/js/accessibility.js"></script>
+		
+	<!-- ****** Code for scorm package to be read by Moodle ****** -->	  	
+	<script type="text/javascript">
+
+		//creating shortcut for less verbose code
+		var scorm = pipwerks.SCORM;
+
+		function init(){
+			//Specify SCORM 1.2:
+			scorm.version = "1.2";
+			show("Initializing course.");
+			var callSucceeded = scorm.init();
+			show("Call succeeded? " +callSucceeded);
+			console.log("Call succeeded? " +callSucceeded);
+			
+			//Check for a bookmark
+        	//scorm.set("cmi.core.lesson_location", "1");
+			
+		}
+		init();
+		
+		function send(){
+			var field = document.getElementById("userText"),
+				value = "Placeholder text";
+			if(field.value !== null && field.value !== ""){
+				value = field.value;
+			}
+			set('cmi.suspend_data', value);
+		}
+
+		function set(param, value){
+			show("Sending: '" +value +"'");
+			var callSucceeded = scorm.set(param, value);
+			show("Call succeeded? " +callSucceeded);
+			return callSucceeded;
+		}
+
+		function get(param){
+			var value = scorm.get(param);
+			show("Received: '" +value +"'");
+			return value;
+		}
+
+		function complete(){
+			show("Setting course status to 'completed'.");
+			var callSucceeded = scorm.set("cmi.core.lesson_status", "completed");
+			show("Call succeeded? " +callSucceeded);
+		}
+
+		function end(){
+			show("Terminating connection.");
+			
+			var saved = scorm.save();//pipwerks function for LMSCommit()
+			
+			show("Save succeeded? " + saved);
+			
+			var callSucceeded = scorm.quit();
+			
+  			//scorm.quit();//pipwerks function for LMSFinish()
+
+			show("quit succeeded? " +callSucceeded);
+		}
+
+		function show(msg){
+			var debugText = document.getElementById("debugText");
+			if(debugText){
+				debugText.innerHTML += msg +"<br/>";
+			}
+			//Can also show data using pipwerks.UTILS.trace
+			pipwerks.UTILS.trace(msg);
+		}
+		
+		function getStudentName(){
+			
+			//return student first name
+			var stName = scorm.get("cmi.core.student_name").split(',');
+			
+			return stName[1];
+		}
+		window.onload = function (){
+			
+			// Show student name
+			console.log("Welcome " + getStudentName());
+			
+			// Page load time
+			var loadTime = window.performance.timing.domContentLoadedEventEnd-window.performance.timing.navigationStart; 
+			console.log(`Page load time is ${loadTime/1000} seconds`);
+		}
+
+		window.onunload = function (){
+			
+			updateSessionTime(startTime);
+		}
+
+	</script>
+	<!-- ****** End of scorm code ****** -->  
+	
+	<base target="_self">
+</head>
+	
+<body>
+	<!-- blocker to sspac all mouse interactions during animations -->	
+	<div class="blocker offBlocker" style="display:block;  overflow: hidden; height: 100vh; width: 100vw; position: fixed; background-color: rgba(255, 0, 0, 0); z-index: 20;"></div>
+	<!-- Preload required UI images for rollovers -->
+
+	<div style="width:1px; height:1px; overflow: hidden;">
+		<img src="interface/images/icon_audioOn_over.svg" /><img src="interface/images/minerva_cc_tab_o.svg" /><img src="interface/images/icon_audioOff_over.svg" /><img src="interface/images/icon_audioOff.svg" /><img src="interface/images/icon_pause_o.svg" /><img src="interface/images/icon_pause.svg" /><img src="interface/images/icon_play.svg" /><img src="interface/images/icon_play_o.svg" /><img src="interface/images/icon_replay_o.svg" />
+	</div>
+	
+	
+	<!-- main menu -->
+	<iframe id="mainMenuIframe" frameborder="0" src="main_menu.html" allowfullscreen></iframe>
+	
+	<!-- the '.firstTab' element is used to set focus on last element if shift+tab used. -->
+	<div class="firstTab" tabindex="101"></div>
+	
+	<!-- Header -->
+	<div class="header-container">
+		<picture class="header__logo">
+			<source media="(max-width: 767px)" srcset="interface/images/minerva_logo_m.svg">
+			<img id="logo" src="interface/images/minerva_logo.svg" alt="Minerva logo" tabindex="102">
+		</picture>
+		<div class="header__title">
+			<h2 id="pageTitle">Topic X: First topic of the template</h2>
+		</div>
+	</div>
+	
+	
+	<!-- iFrame container holds the majority of the courses pages. Each iFrame is a new page in the course 
+		iFrames are added dynamically. see the script at the end of this page
+	-->			
+	<div id="iframe-container" name="iframe-container" class="iframe-container"> 
+	  <div class="blockAndFade" style="height: 100%; width: 100%; position: fixed; background-color: rgba(0,0,0,0.5); display: none; z-index: 3;" ></div>
+	  <div class="fader" style="display:block;  overflow: auto; height: 100%; width: 100%; position: fixed; background-color: #FFFFFF; pointer-events: none;" ></div>	
+	
+		<!--iframes will be added here (at the end of 'iframe-container') -->		
+	</div>
+	
+	
+	
+	<div class="footerContainer">
+		<!-- CC -->	
+		<div class="ccContainer" > 
+
+			<div class="ccButton tooltip" id="ccButton" tabindex="104" role="button" aria-label="closed caption">
+				<span class="tooltiptext ccButton-tooltip">Closed Caption</span>
+			</div>
+			<div id="closedCaption" >
+				<div id="ccText" class="customScroll" tabindex="105"></div>
+			</div>	
+		</div>
+
+		<!-- Footer -->			
+		<div class="footer">
+			
+			<div class="module-title-container">
+				<div class="module-title">Module 1: Health and Safety 101</div>
+			</div>
+			
+			<div class="nav-items">
+				<!-- progress bar -->
+				<div class="progressContainer" >
+					<div class="controlContainer">
+						
+						<div class="unmute controlIcons tooltip" id="audioBtn" tabindex="106" role="button" aria-label="mute unmute">
+							<span class="tooltiptext tooltip3">Mute/Unmute</span>
+						</div>
+
+						<div class="sliderContainer">
+							 <input type="range" min="1" max="100" value="50" class="slider" aria-label="Volume" id="volSlider" tabindex="107"/>
+							 <input class="audioSliderMask" type="range"/>
+							 <span class="tooltiptext">Volume</span>
+						</div>
+
+
+						<div class="play controlIcons tooltip" id="playBtn" tabindex="108" role="button" aria-label="play pause">
+							<span class="tooltiptext tooltip3">Play/Pause</span>
+						</div>
+						<div class="replay controlIcons tooltip" id="replayBtn" tabindex="109" role="button" aria-label="replay">
+							<span class="tooltiptext tooltip3">Replay</span>
+						</div>
+						
+						<div class="progressBarContainer">
+							<div class="progressBar tooltip" tabindex="110" aria-label="progress bar">
+								<div id="pBar">
+									<span class="tooltiptext tooltip2">Progress Bar</span>
+								</div>
+							</div>
+							<p id="progPercent"> </p>
+						</div>
+					</div>
+					<!-- audio icon -->
+
+				</div>
+				<div class="nav-container">
+					<button id="back" class="accordion" tabindex="111" role="button" aria-label="back">Back</button>
+					<button id="main" class="accordion tooltip" tabindex="112" role="button" aria-label="main menu">
+						<span class="tooltiptext">Menu</span>
+					</button>
+					<button id="forward" class="accordion" tabindex="113" role="button" aria-label="next">Next</button>
+					
+					<!-- the '.lastTab' element is used to set focus on '#navigation' element. -->
+					<div class="lastTab" tabindex="114"></div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>

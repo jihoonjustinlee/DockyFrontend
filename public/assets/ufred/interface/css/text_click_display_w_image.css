@@ -1,0 +1,24 @@
+.vertical-container {
+	justify-content: space-between;
+}
+.cndButton, .container  {
+	flex-grow: 1;
+}
+
+
+
+.cndButton:last-child {
+	margin-bottom: 0;
+}
+
+@media only screen and  (orientation: portrait){
+	.container {
+		height: 70vh;
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	.cndButton {
+		margin-top:0;
+	}
+}

@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+	<!--image_click_display-->
+	<meta charset="utf-8">
+	<title>Image Click Display</title>
+	<link rel="stylesheet" href="interface/css/core.css">
+	<link rel="stylesheet" href="interface/css/image_click_display.css">
+	<script src="interface/js/jquery.js"></script>
+	<script src="interface/js/image_click_display.js" defer></script>
+	<script>
+		
+		// Sets number of options to click and display , between 2 and 4.
+		let numItems = 3; 
+
+		// The label on the click and display buttons. If numItems is less than 4, DON'T have to remove the extra options (but you can if you want to make the page cleaner).
+		let headerArray = ["Option One",
+						   "Option Two",
+						   "Option Three", 
+						   "Option Four"];
+
+		// The content to display when the click and display button is clicked. If numItems is less than 6, DON'T have to remove the extra options (but you can if you want to make the page cleaner)
+		let contentArray = [
+						   `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo cex ea commodo.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo cex ea commodo.</p>`,
+
+						   `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>`,
+
+						   `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo cex ea commodo.</p>`,
+
+						   `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo cex ea commodo.</p>`];
+
+		// Determine how many NON-INTERACTIVE (auto played) audios are needed, set to negative number to indicate animation timing/custom implementation is required.
+		let numAudios = 2;
+	</script>
+	<style>
+	</style>
+</head>
+<body class="customScroll">
+	<div class="textarea fullWidth">
+		<h1>Image Click Display</h1>
+		<p><strong>Notes to the adorable ID crew:</strong></p>
+		<ol>
+			<li><span>This template works for any number of clickable items from <strong>one to six</strong>.</span></li> 
+		</ol>
+		<p>This is the image click and display template from Minerva.</p>
+		<p class="directive" >Click each option for more information. Then, click the ‘Next’ arrow to continue.</p>
+	
+
+	</div>
+	<div class="container"></div>
+
+	
+	<script src="assets/js/pages.js"></script>
+	<script src="interface/js/media_control.js"></script>
+	<script src="interface/js/audio_markup_generator.js"></script>
+</body>
+</html>
